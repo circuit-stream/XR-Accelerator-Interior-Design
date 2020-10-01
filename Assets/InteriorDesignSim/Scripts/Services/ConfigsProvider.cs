@@ -9,11 +9,16 @@ namespace XRAccelerator.Services
 {
     public class ConfigsProvider
     {
-        private Dictionary<FurnitureType, List<FurnitureConfig>> furnitureConfigsByType;
+        public readonly List<FurnitureConfig> allFurnitureConfigs;
+        private readonly Dictionary<FurnitureType, List<FurnitureConfig>> furnitureConfigsByType;
         private List<CatalogConfig> catalogConfigs;
 
         public ConfigsProvider()
         {
+            allFurnitureConfigs = new List<FurnitureConfig>();
+            catalogConfigs = Resources.LoadAll<CatalogConfig>("CatalogConfigs").ToList();
+            furnitureConfigsByType = new Dictionary<FurnitureType, List<FurnitureConfig>>();
+
             InitializeVariables();
             FetchConfigs();
         }
@@ -25,8 +30,6 @@ namespace XRAccelerator.Services
 
         private void InitializeVariables()
         {
-            furnitureConfigsByType = new Dictionary<FurnitureType, List<FurnitureConfig>>();
-
             foreach (FurnitureType value in Enum.GetValues(typeof(FurnitureType)))
             {
                 furnitureConfigsByType[value] = new List<FurnitureConfig>();
@@ -35,13 +38,12 @@ namespace XRAccelerator.Services
 
         private void FetchConfigs()
         {
-            catalogConfigs = Resources.LoadAll<CatalogConfig>("CatalogConfigs").ToList();
-
             foreach (var catalogConfig in catalogConfigs)
             {
                 foreach (var furnitureConfig in catalogConfig.FurnitureConfigs)
                 {
                     furnitureConfigsByType[furnitureConfig.FurnitureType].Add(furnitureConfig);
+                    allFurnitureConfigs.Add(furnitureConfig);
                 }
             }
 

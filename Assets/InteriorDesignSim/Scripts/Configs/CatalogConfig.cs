@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace XRAccelerator.Configs
 {
+    [CreateAssetMenu(fileName = "New Catalog Config", menuName = "Configs/Catalog")]
     public class CatalogConfig : ScriptableObject
     {
         [SerializeField]

@@ -1,9 +1,11 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using Signals;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using XRAccelerator.Configs;
+using XRAccelerator.Services;
+using XRAccelerator.Signals;
 
 namespace XRAccelerator.Gameplay
 {
@@ -12,6 +14,8 @@ namespace XRAccelerator.Gameplay
         private const float minScaleDistance = 0.0f;
         private const float maxScaleDistance = 1.0f;
         private const float scaleMod = 1.0f;
+
+        private readonly List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
 
         [SerializeField]
         [Tooltip("TooltipText")]
@@ -28,26 +32,38 @@ namespace XRAccelerator.Gameplay
         [Tooltip("TooltipText")]
         private Transform cameraTransform;
 
-        private GameObject spawnedReticle;
-        private readonly List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
+        private GameObject spawnedReticleGameObject;
+        private Transform spawnedReticleTransform;
 
-        public Transform GetReticlePosition()
+        private FurniturePreviewGraphics spawnedPreview;
+        private FurnitureConfig currentFurnitureConfig;
+
+        public bool ValidReticlePosition => spawnedReticleGameObject.activeSelf;
+
+        public Transform GetReticleTransform()
         {
-            return spawnedReticle.transform;
+            return spawnedReticleTransform;
         }
 
         private void RepositionReticle()
         {
+            // TODO Arthur Optional: use GestureTransformationUtility.Raycast
             if (raycastManager.Raycast(ScreenUtils.CenterScreen, raycastHits, TrackableType.PlaneWithinPolygon))
             {
                 Pose hitPose = raycastHits[0].pose;
-                spawnedReticle.transform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
-                spawnedReticle.SetActive(true);
 
-                return;
+                // Use hit pose and camera pose to check if the hit is not from the back of the plane
+                if (Vector3.Dot(cameraTransform.position - hitPose.position,
+                    hitPose.rotation * Vector3.up) >= 0)
+                {
+                    spawnedReticleTransform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
+                    spawnedReticleGameObject.SetActive(true);
+
+                    return;
+                }
             }
 
-            spawnedReticle.SetActive(false);
+            spawnedReticleGameObject.SetActive(false);
         }
 
         private void ScaleReticle()
@@ -57,13 +73,69 @@ namespace XRAccelerator.Gameplay
                 return;
             }
 
-            var currentDistance = Vector3.Distance(spawnedReticle.transform.position, cameraTransform.position);
+            var currentDistance = Vector3.Distance(spawnedReticleTransform.position, cameraTransform.position);
 
             var currentNormalizedDistance =
                 (Mathf.Abs(currentDistance - minScaleDistance) / (maxScaleDistance - minScaleDistance)) +
                 scaleMod;
-            spawnedReticle.transform.localScale = new Vector3(currentNormalizedDistance,
+
+            spawnedReticleTransform.localScale = new Vector3(currentNormalizedDistance,
                 currentNormalizedDistance, currentNormalizedDistance);
+        }
+
+        private void CreateDefiniteFurniture()
+        {
+            var transformCache = spawnedPreview.transform;
+            var newObject = Instantiate(currentFurnitureConfig.FurniturePrefab, transformCache.position, transformCache.rotation);
+
+            ServiceLocator.GetService<SignalDispatcher>().Dispatch(new FurniturePlaced
+            {
+                Config = currentFurnitureConfig,
+                Graphics = newObject
+            });
+        }
+
+        private void CreatePreviewFurniture()
+        {
+            spawnedPreview = Instantiate(currentFurnitureConfig.furniturePreviewPrefab, spawnedReticleTransform);
+            spawnedPreview.transform.localPosition = Vector3.zero;
+            spawnedPreview.transform.localRotation = Quaternion.identity;
+
+            spawnedPreview.OnWasTapped += OnPreviewWasTapped;
+        }
+
+        private void OnPreviewWasTapped()
+        {
+            spawnedPreview.DestroyXRInteractable();
+            CreateDefiniteFurniture();
+        }
+
+        private void OnFurnitureSelected(FurnitureSelected signalParams)
+        {
+            if (signalParams.Config == currentFurnitureConfig)
+            {
+                return;
+            }
+
+            currentFurnitureConfig = signalParams.Config;
+            CreatePreviewFurniture();
+        }
+
+        private void OnSelectingFurniture(SelectingFurniture signalParams)
+        {
+            if (spawnedPreview != null)
+            {
+                Destroy(spawnedPreview.gameObject);
+            }
+
+            spawnedPreview = null;
+            currentFurnitureConfig = null;
+        }
+
+        private void OnFurniturePlaced(FurniturePlaced signalParams)
+        {
+            currentFurnitureConfig = null;
+            spawnedPreview = null;
         }
 
         private void Update()
@@ -72,10 +144,20 @@ namespace XRAccelerator.Gameplay
             ScaleReticle();
         }
 
-        private void Start()
+        private void Awake()
         {
-            spawnedReticle = Instantiate(reticlePrefab);
-            spawnedReticle.SetActive(false);
+            spawnedReticleGameObject = Instantiate(reticlePrefab);
+            spawnedReticleGameObject.SetActive(false);
+            spawnedReticleTransform = spawnedReticleGameObject.transform;
+            RegisterSignals();
+        }
+
+        private void RegisterSignals()
+        {
+            var signalDispatcher = ServiceLocator.GetService<SignalDispatcher>();
+            signalDispatcher.AddListener<FurnitureSelected>(OnFurnitureSelected);
+            signalDispatcher.AddListener<SelectingFurniture>(OnSelectingFurniture);
+            signalDispatcher.AddListener<FurniturePlaced>(OnFurniturePlaced);
         }
     }
 }

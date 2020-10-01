@@ -4,6 +4,7 @@ using XRAccelerator.Gameplay;
 
 namespace XRAccelerator.Configs
 {
+    [CreateAssetMenu(fileName = "New Furniture Config", menuName = "Configs/Furniture")]
     public class FurnitureConfig : ScriptableObject
     {
         [SerializeField]
@@ -15,8 +16,12 @@ namespace XRAccelerator.Configs
         public FurnitureType FurnitureType;
 
         [SerializeField]
-        [Tooltip("The 3D prefab instantiated")]
+        [Tooltip("The prefab instantiated")]
         public FurnitureGraphics FurniturePrefab;
+
+        [SerializeField]
+        [Tooltip("The preview prefab showed during placement")]
+        public FurniturePreviewGraphics furniturePreviewPrefab;
 
         [SerializeField]
         [Tooltip("Furniture preview displayed during furniture seleciton")]
