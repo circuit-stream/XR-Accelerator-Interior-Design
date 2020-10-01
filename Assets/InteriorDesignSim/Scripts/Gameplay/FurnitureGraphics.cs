@@ -4,6 +4,5 @@ namespace XRAccelerator.Gameplay
 {
     public class FurnitureGraphics : MonoBehaviour
     {
-
     }
 }
