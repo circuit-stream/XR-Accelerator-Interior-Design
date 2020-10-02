@@ -101,13 +101,6 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-    "com.unity.uiextensions": {
-      "version": "https://bitbucket.org/UnityUIExtensions/unity-ui-extensions.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "214b4a1a6965559b13f5363bbddb380b86f45c13"
-    },
     "com.unity.xr.arcore": {
       "version": "4.1.0-preview.7",
       "depth": 0,
