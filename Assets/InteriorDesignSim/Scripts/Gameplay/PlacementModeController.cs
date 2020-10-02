@@ -9,18 +9,19 @@ using XRAccelerator.Signals;
 
 namespace XRAccelerator.Gameplay
 {
-    public class FurnitureCatalogGraphics : MonoBehaviour
+    public class PlacementModeController : ModeController
     {
+        [Header("Furniture Catalog Specific")]
         [SerializeField]
         [Tooltip("Reference to the ScrollSnapBase component in the catalog scroll UI gameObject")]
         public SimpleScrollSnap catalogScroll;
 
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Reference to the parent of the dynamically instantiated catalogEntries")]
         private RectTransform catalogEntriesHolder;
 
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Catalog entry prefab reference")]
         private FurnitureCatalogEntry catalogEntryPrefab;
 
         private List<FurnitureCatalogEntry> catalogEntries;
@@ -35,6 +36,20 @@ namespace XRAccelerator.Gameplay
         public FurnitureConfig GetSelectedFurniture()
         {
             return SelectedEntry.Config;
+        }
+
+        public override void EnableMode()
+        {
+            // Enable placement reticle, reposition scroll
+
+            base.EnableMode();
+        }
+
+        public override void DisableMode()
+        {
+            // Disable placement reticle
+
+            base.DisableMode();
         }
 
         private void OnStartedSelectingFurniture()

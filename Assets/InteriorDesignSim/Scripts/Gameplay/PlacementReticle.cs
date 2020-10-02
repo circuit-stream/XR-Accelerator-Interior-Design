@@ -18,18 +18,18 @@ namespace XRAccelerator.Gameplay
         private readonly List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
 
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Should the reticle scale with the distance to the camera")]
         private bool scaleReticleWithDistance = true;
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("The reticle that will be instantiated")]
         private GameObject reticlePrefab;
 
         [Header("Scene References")]
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Reference to the ARRaycastManager component")]
         private ARRaycastManager raycastManager;
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Reference to the camera transform")]
         private Transform cameraTransform;
 
         private GameObject spawnedReticleGameObject;
