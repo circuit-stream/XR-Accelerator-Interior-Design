@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using DanielLochner.Assets.SimpleScrollSnap;
 using Signals;
 using UnityEngine;
-using UnityEngine.UI.Extensions;
 using XRAccelerator.Configs;
 using XRAccelerator.Services;
 using XRAccelerator.Signals;
@@ -13,7 +13,7 @@ namespace XRAccelerator.Gameplay
     {
         [SerializeField]
         [Tooltip("Reference to the ScrollSnapBase component in the catalog scroll UI gameObject")]
-        public ScrollSnapBase catalogScroll;
+        public SimpleScrollSnap catalogScroll;
 
         [SerializeField]
         [Tooltip("TooltipText")]
@@ -26,6 +26,7 @@ namespace XRAccelerator.Gameplay
         private List<FurnitureCatalogEntry> catalogEntries;
         private int selectedEntryIndex;
         private FurnitureCatalogEntry SelectedEntry => catalogEntries[selectedEntryIndex];
+        private bool IsValidSelectedEntry => selectedEntryIndex != -1;
 
         private SignalDispatcher signalDispatcher;
 
@@ -38,21 +39,24 @@ namespace XRAccelerator.Gameplay
 
         private void OnStartedSelectingFurniture()
         {
-            SelectedEntry.DeHighlight();
+            if (IsValidSelectedEntry)
+            {
+                SelectedEntry.DeHighlight();
+            }
 
             selectedEntryIndex = -1;
             IsSelectingFurniture = true;
             signalDispatcher.Dispatch<SelectingFurniture>();
         }
 
-        private void OnChangedFurnitureSelection(int index)
+        private void OnChangedFurnitureSelection()
         {
-            if (selectedEntryIndex == index)
+            if (selectedEntryIndex == catalogScroll.CurrentPanel)
             {
                 return;
             }
 
-            selectedEntryIndex = index;
+            selectedEntryIndex = catalogScroll.CurrentPanel;
             SelectedEntry.Highlight();
 
             IsSelectingFurniture = false;
@@ -81,21 +85,21 @@ namespace XRAccelerator.Gameplay
             // Wait for scrollRect to reposition children
             yield return null;
 
-            catalogScroll.GetComponent<UI_InfiniteScroll>().Init();
             catalogScroll.enabled = true;
 
-            // Wait ScrollSnapBase setup
+            // Wait SimpleScrollSnap setup
             yield return null;
 
-            catalogScroll.ChangePage(0);
+            selectedEntryIndex = -1;
+            OnChangedFurnitureSelection();
         }
 
         private void Start()
         {
             StartCoroutine(SetupScroll());
 
-            catalogScroll.OnSelectionChangeEndEvent.AddListener(OnChangedFurnitureSelection);
-            catalogScroll.OnSelectionChangeStartEvent.AddListener(OnStartedSelectingFurniture);
+            catalogScroll.onPanelChanged.AddListener(OnChangedFurnitureSelection);
+            catalogScroll.onPanelSelecting.AddListener(OnStartedSelectingFurniture);
 
             signalDispatcher = ServiceLocator.GetService<SignalDispatcher>();
         }
