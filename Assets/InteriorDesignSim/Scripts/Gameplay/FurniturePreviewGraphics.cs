@@ -1,9 +1,12 @@
 using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.AR;
 
 namespace XRAccelerator.Gameplay
 {
-    public class FurniturePreviewGraphics : ARBaseGestureInteractable
+    public class FurniturePreviewGraphics : ARRotationInteractable
     {
         public Action OnWasTapped;
 
@@ -11,12 +14,20 @@ namespace XRAccelerator.Gameplay
 
         // [XRToolkitWorkaround] Something is keeping a reference to this interactable
         // this way we can kill the object and prevent NullReferenceExceptions.
-        public void DestroyXRInteractable()
+        public IEnumerator DestroyXRInteractable()
         {
             OnWasTapped = null;
             colliders.Clear();
-            Destroy(gameObject);
             wasDestroyed = true;
+            gameObject.SetActive(false);
+            yield return null;
+
+            Destroy(gameObject);
+        }
+
+        public override bool IsSelectableBy(XRBaseInteractor interactor)
+        {
+            return interactor is ARGestureInteractor && !wasDestroyed;
         }
 
         protected override bool CanStartManipulationForGesture(TapGesture gesture)
@@ -32,6 +43,11 @@ namespace XRAccelerator.Gameplay
             }
 
             OnWasTapped?.Invoke();
+        }
+
+        protected override bool IsGameObjectSelected()
+        {
+            return !wasDestroyed && base.IsGameObjectSelected();
         }
     }
 }

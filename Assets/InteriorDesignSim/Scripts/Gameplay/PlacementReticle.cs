@@ -106,7 +106,7 @@ namespace XRAccelerator.Gameplay
 
         private void OnPreviewWasTapped()
         {
-            spawnedPreview.DestroyXRInteractable();
+            StartCoroutine(spawnedPreview.DestroyXRInteractable());
             CreateDefiniteFurniture();
         }
 
@@ -125,7 +125,7 @@ namespace XRAccelerator.Gameplay
         {
             if (spawnedPreview != null)
             {
-                Destroy(spawnedPreview.gameObject);
+                StartCoroutine(spawnedPreview.DestroyXRInteractable());
             }
 
             spawnedPreview = null;
