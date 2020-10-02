@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 719740ac2e760d2498976b9fab674ce4
+timeCreated: 1519111981
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ChamferBox001
+    100002: ChamferBox001_BBox
+    100004: ChamferBox010
+    100006: ChamferBox010_BBox
+    100008: ChamferBox014
+    100010: ChamferBox014_BBox
+    100012: ChamferBox019
+    100014: ChamferBox019_BBox
+    100016: ChamferBox025
+    100018: ChamferBox025_BBox
+    100020: ChamferBox033
+    100022: ChamferBox033_BBox
+    100024: ChamferBox043
+    100026: ChamferBox043_BBox
+    100028: //RootNode
+    100030: Kallax_1x1
+    100032: Kallax_1x4
+    100034: Kallax_2x1
+    100036: Kallax_2x2
+    100038: Kallax_2x4
+    100040: Kallax_4x4
+    100042: Kallax_5x5
+    400000: ChamferBox001
+    400002: ChamferBox001_BBox
+    400004: ChamferBox010
+    400006: ChamferBox010_BBox
+    400008: ChamferBox014
+    400010: ChamferBox014_BBox
+    400012: ChamferBox019
+    400014: ChamferBox019_BBox
+    400016: ChamferBox025
+    400018: ChamferBox025_BBox
+    400020: ChamferBox033
+    400022: ChamferBox033_BBox
+    400024: ChamferBox043
+    400026: ChamferBox043_BBox
+    400028: //RootNode
+    400030: Kallax_1x1
+    400032: Kallax_1x4
+    400034: Kallax_2x1
+    400036: Kallax_2x2
+    400038: Kallax_2x4
+    400040: Kallax_4x4
+    400042: Kallax_5x5
+    2100000: 01 - Default
+    2300000: ChamferBox001_BBox
+    2300002: ChamferBox010_BBox
+    2300004: ChamferBox014_BBox
+    2300006: ChamferBox019_BBox
+    2300008: ChamferBox025_BBox
+    2300010: ChamferBox033_BBox
+    2300012: ChamferBox043_BBox
+    2300014: Kallax_1x1
+    2300016: Kallax_1x4
+    2300018: Kallax_2x1
+    2300020: Kallax_2x2
+    2300022: Kallax_2x4
+    2300024: Kallax_4x4
+    2300026: Kallax_5x5
+    3300000: ChamferBox001_BBox
+    3300002: ChamferBox010_BBox
+    3300004: ChamferBox014_BBox
+    3300006: ChamferBox019_BBox
+    3300008: ChamferBox025_BBox
+    3300010: ChamferBox033_BBox
+    3300012: ChamferBox043_BBox
+    3300014: Kallax_1x1
+    3300016: Kallax_1x4
+    3300018: Kallax_2x1
+    3300020: Kallax_2x2
+    3300022: Kallax_2x4
+    3300024: Kallax_4x4
+    3300026: Kallax_5x5
+    4300000: ChamferBox033_BBox
+    4300002: ChamferBox001_BBox
+    4300004: ChamferBox010_BBox
+    4300006: ChamferBox014_BBox
+    4300008: ChamferBox019_BBox
+    4300010: ChamferBox025_BBox
+    4300012: ChamferBox043_BBox
+    4300014: Kallax_2x1
+    4300016: Kallax_1x1
+    4300018: Kallax_1x4
+    4300020: Kallax_2x4
+    4300022: Kallax_5x5
+    4300024: Kallax_4x4
+    4300026: Kallax_2x2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
