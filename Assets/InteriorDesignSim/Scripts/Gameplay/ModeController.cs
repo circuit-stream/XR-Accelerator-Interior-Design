@@ -9,15 +9,13 @@ namespace XRAccelerator.Gameplay
         private static readonly int ActiveHash = Animator.StringToHash("Active");
 
         [SerializeField]
-        [Tooltip("The mode this config represents")]
-        public Mode Mode;
-
-        [SerializeField]
         [Tooltip("Reference to this mode tab button")]
         public Button TabButton;
 
         protected ModesController ModesController;
         private Animator tabAnimator;
+
+        public abstract Mode Mode { get; }
 
         public virtual void EnableMode()
         {

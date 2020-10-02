@@ -38,11 +38,24 @@ namespace XRAccelerator.Gameplay
         private FurniturePreviewGraphics spawnedPreview;
         private FurnitureConfig currentFurnitureConfig;
 
-        public bool ValidReticlePosition => spawnedReticleGameObject.activeSelf;
-
-        public Transform GetReticleTransform()
+        public void Enable()
         {
-            return spawnedReticleTransform;
+            gameObject.SetActive(true);
+
+            if (currentFurnitureConfig != null)
+            {
+                CreatePreviewFurniture();
+            }
+        }
+
+        public void Disable()
+        {
+            if (spawnedPreview != null)
+            {
+                DestroyPreview();
+            }
+
+            gameObject.SetActive(false);
         }
 
         private void RepositionReticle()
@@ -106,7 +119,7 @@ namespace XRAccelerator.Gameplay
 
         private void OnPreviewWasTapped()
         {
-            StartCoroutine(spawnedPreview.DestroyXRInteractable());
+            DestroyPreview();
             CreateDefiniteFurniture();
         }
 
@@ -125,11 +138,16 @@ namespace XRAccelerator.Gameplay
         {
             if (spawnedPreview != null)
             {
-                StartCoroutine(spawnedPreview.DestroyXRInteractable());
+                DestroyPreview();
             }
 
-            spawnedPreview = null;
             currentFurnitureConfig = null;
+        }
+
+        private void DestroyPreview()
+        {
+            StartCoroutine(spawnedPreview.DestroyXRInteractable());
+            spawnedPreview = null;
         }
 
         private void OnFurniturePlaced(FurniturePlaced signalParams)

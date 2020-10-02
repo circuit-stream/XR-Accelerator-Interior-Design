@@ -4,6 +4,7 @@ using DanielLochner.Assets.SimpleScrollSnap;
 using Signals;
 using UnityEngine;
 using XRAccelerator.Configs;
+using XRAccelerator.Enums;
 using XRAccelerator.Services;
 using XRAccelerator.Signals;
 
@@ -11,7 +12,7 @@ namespace XRAccelerator.Gameplay
 {
     public class PlacementModeController : ModeController
     {
-        [Header("Furniture Catalog Specific")]
+        [Header("Placement Mode Specific")]
         [SerializeField]
         [Tooltip("Reference to the ScrollSnapBase component in the catalog scroll UI gameObject")]
         public SimpleScrollSnap catalogScroll;
@@ -19,6 +20,10 @@ namespace XRAccelerator.Gameplay
         [SerializeField]
         [Tooltip("Reference to the parent of the dynamically instantiated catalogEntries")]
         private RectTransform catalogEntriesHolder;
+
+        [SerializeField]
+        [Tooltip("Reference to the placementReticle component")]
+        private PlacementReticle placementReticle;
 
         [SerializeField]
         [Tooltip("Catalog entry prefab reference")]
@@ -33,6 +38,8 @@ namespace XRAccelerator.Gameplay
 
         public bool IsSelectingFurniture { get; private set; }
 
+        public override Mode Mode => Mode.Placement;
+
         public FurnitureConfig GetSelectedFurniture()
         {
             return SelectedEntry.Config;
@@ -40,14 +47,14 @@ namespace XRAccelerator.Gameplay
 
         public override void EnableMode()
         {
-            // Enable placement reticle, reposition scroll
+            placementReticle.Enable();
 
             base.EnableMode();
         }
 
         public override void DisableMode()
         {
-            // Disable placement reticle
+            placementReticle.Disable();
 
             base.DisableMode();
         }
