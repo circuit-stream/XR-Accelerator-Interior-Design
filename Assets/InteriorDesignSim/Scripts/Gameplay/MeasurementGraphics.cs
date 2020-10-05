@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace XRAccelerator.Gameplay
 {
@@ -9,11 +10,17 @@ namespace XRAccelerator.Gameplay
         [Tooltip("TooltipText")]
         private TMP_Text measurementText;
 
+        [SerializeField]
+        [Tooltip("TooltipText")]
+        private LayoutGroup layoutGroup;
+
         private Transform anchor1;
         private Vector3 lastAnchor1Position;
 
         private Transform anchor2;
         private Vector3 lastAnchor2Position;
+        private Transform mainCameraTransform;
+        private Transform _transform;
 
         public void ChangeAnchor2(Transform newAnchor)
         {
@@ -37,18 +44,37 @@ namespace XRAccelerator.Gameplay
             var direction = lastAnchor1Position - lastAnchor2Position;
             var distance = direction.magnitude;
 
-            // TODO Arthur: Parse to cm / mm / ...
-            measurementText.text = distance.ToString("F2");
+            measurementText.text = ParseDistance(distance);
 
-            transform.position = lastAnchor2Position + distance * 0.5f * direction.normalized;
+            _transform.position = lastAnchor2Position + distance * 0.5f * direction.normalized + new Vector3(0, 0.05f, 0);
+
+            layoutGroup.enabled = false;
+            Canvas.ForceUpdateCanvases();
+            layoutGroup.enabled = true;
         }
 
-        private void Update()
+        private string ParseDistance(float distance)
+        {
+            if (distance > 1)
+                return $"{distance:F2} m";
+
+            return $"{(distance * 100):f0} cm";
+        }
+
+        private void LateUpdate()
         {
             if (lastAnchor1Position != anchor1.position || lastAnchor2Position != anchor2.position)
             {
                 ResetMeasurement();
             }
+
+            _transform.forward = mainCameraTransform.forward;
+        }
+
+        private void Awake()
+        {
+            mainCameraTransform = Camera.main.transform;
+            _transform = transform;
         }
     }
 }

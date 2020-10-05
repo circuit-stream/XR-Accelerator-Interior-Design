@@ -1,11 +1,9 @@
+using System;
 using System.Collections.Generic;
-using Signals;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using XRAccelerator.Configs;
-using XRAccelerator.Services;
-using XRAccelerator.Signals;
 
 namespace XRAccelerator.Gameplay
 {
@@ -37,6 +35,7 @@ namespace XRAccelerator.Gameplay
 
         private FurniturePreviewGraphics spawnedPreview;
         private FurnitureConfig currentFurnitureConfig;
+        private Action<FurnitureGraphics> furniturePlacedCallback;
 
         public void Enable()
         {
@@ -56,6 +55,32 @@ namespace XRAccelerator.Gameplay
             }
 
             gameObject.SetActive(false);
+        }
+
+        public void EnablePreviewFurniture(FurnitureConfig newConfig)
+        {
+            if (newConfig == currentFurnitureConfig)
+            {
+                return;
+            }
+
+            currentFurnitureConfig = newConfig;
+            CreatePreviewFurniture();
+        }
+
+        public void DisablePreviewFurniture()
+        {
+            if (spawnedPreview != null)
+            {
+                DestroyPreview();
+            }
+
+            currentFurnitureConfig = null;
+        }
+
+        public void Setup(Action<FurnitureGraphics> callback)
+        {
+            furniturePlacedCallback = callback;
         }
 
         private void RepositionReticle()
@@ -100,12 +125,7 @@ namespace XRAccelerator.Gameplay
         {
             var transformCache = spawnedPreview.transform;
             var newObject = Instantiate(currentFurnitureConfig.FurniturePrefab, transformCache.position, transformCache.rotation);
-
-            ServiceLocator.GetService<SignalDispatcher>().Dispatch(new FurniturePlaced
-            {
-                Config = currentFurnitureConfig,
-                Graphics = newObject
-            });
+            furniturePlacedCallback(newObject);
         }
 
         private void CreatePreviewFurniture()
@@ -119,40 +139,12 @@ namespace XRAccelerator.Gameplay
 
         private void OnPreviewWasTapped()
         {
-            DestroyPreview();
             CreateDefiniteFurniture();
-        }
-
-        private void OnFurnitureSelected(FurnitureSelected signalParams)
-        {
-            if (signalParams.Config == currentFurnitureConfig)
-            {
-                return;
-            }
-
-            currentFurnitureConfig = signalParams.Config;
-            CreatePreviewFurniture();
-        }
-
-        private void OnSelectingFurniture(SelectingFurniture signalParams)
-        {
-            if (spawnedPreview != null)
-            {
-                DestroyPreview();
-            }
-
-            currentFurnitureConfig = null;
         }
 
         private void DestroyPreview()
         {
             StartCoroutine(spawnedPreview.DestroyXRInteractable());
-            spawnedPreview = null;
-        }
-
-        private void OnFurniturePlaced(FurniturePlaced signalParams)
-        {
-            currentFurnitureConfig = null;
             spawnedPreview = null;
         }
 
@@ -167,15 +159,6 @@ namespace XRAccelerator.Gameplay
             spawnedReticleGameObject = Instantiate(reticlePrefab);
             spawnedReticleGameObject.SetActive(false);
             spawnedReticleTransform = spawnedReticleGameObject.transform;
-            RegisterSignals();
-        }
-
-        private void RegisterSignals()
-        {
-            var signalDispatcher = ServiceLocator.GetService<SignalDispatcher>();
-            signalDispatcher.AddListener<FurnitureSelected>(OnFurnitureSelected);
-            signalDispatcher.AddListener<SelectingFurniture>(OnSelectingFurniture);
-            signalDispatcher.AddListener<FurniturePlaced>(OnFurniturePlaced);
         }
     }
 }

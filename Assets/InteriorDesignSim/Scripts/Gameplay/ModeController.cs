@@ -15,28 +15,41 @@ namespace XRAccelerator.Gameplay
         protected ModesController ModesController;
         private Animator tabAnimator;
 
+        private bool HasTabEntry => TabButton != null;
+
         public abstract Mode Mode { get; }
 
         public virtual void EnableMode()
         {
             gameObject.SetActive(true);
-            TabButton.interactable = false;
-            tabAnimator.SetBool(ActiveHash, true);
+
+            if (HasTabEntry)
+            {
+                TabButton.interactable = false;
+                tabAnimator.SetBool(ActiveHash, true);
+            }
         }
 
         public virtual void DisableMode()
         {
             gameObject.SetActive(false);
-            TabButton.interactable = true;
-            tabAnimator.SetBool(ActiveHash, false);
+
+            if (HasTabEntry)
+            {
+                TabButton.interactable = true;
+                tabAnimator.SetBool(ActiveHash, false);
+            }
         }
 
         public virtual void Setup(ModesController controller)
         {
             ModesController = controller;
 
-            TabButton.onClick.AddListener(() => ModesController.ChangeMode(this));
-            tabAnimator = TabButton.GetComponent<Animator>();
+            if (HasTabEntry)
+            {
+                TabButton.onClick.AddListener(() => ModesController.ChangeMode(Mode));
+                tabAnimator = TabButton.GetComponent<Animator>();
+            }
         }
     }
 }

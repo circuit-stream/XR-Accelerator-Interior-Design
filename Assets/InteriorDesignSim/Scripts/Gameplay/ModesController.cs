@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using XRAccelerator.Enums;
 
 namespace XRAccelerator.Gameplay
 {
@@ -9,31 +10,37 @@ namespace XRAccelerator.Gameplay
         [Tooltip("List of all modeGraphics")]
         private List<ModeController> modeControllers;
 
-        private ModeController currentMode;
+        private Dictionary<Mode, ModeController> controllersByMode;
 
-        public void ChangeMode(ModeController newMode)
+        private Mode currentMode;
+        private ModeController CurrentModeController => controllersByMode[currentMode];
+
+        public void ChangeMode(Mode newMode)
         {
             if (newMode == currentMode)
             {
                 return;
             }
 
-            if (currentMode != null)
+            if (currentMode != Mode.Inactive)
             {
-                currentMode.DisableMode();
+                CurrentModeController.DisableMode();
             }
 
             currentMode = newMode;
-            currentMode.EnableMode();
+            CurrentModeController.EnableMode();
         }
 
         private void SetupModes()
         {
+            currentMode = Mode.Inactive;
+            controllersByMode = new Dictionary<Mode, ModeController>();
 
-            foreach (var modeGraphics in modeControllers)
+            foreach (var modeController in modeControllers)
             {
-                modeGraphics.Setup(this);
-                modeGraphics.DisableMode();
+                modeController.Setup(this);
+                modeController.DisableMode();
+                controllersByMode[modeController.Mode] = modeController;
             }
         }
 

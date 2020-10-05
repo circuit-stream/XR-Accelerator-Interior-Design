@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using DanielLochner.Assets.SimpleScrollSnap;
-using Signals;
 using UnityEngine;
 using XRAccelerator.Configs;
 using XRAccelerator.Enums;
 using XRAccelerator.Services;
-using XRAccelerator.Signals;
 
 namespace XRAccelerator.Gameplay
 {
@@ -34,8 +32,6 @@ namespace XRAccelerator.Gameplay
         private FurnitureCatalogEntry SelectedEntry => catalogEntries[selectedEntryIndex];
         private bool IsValidSelectedEntry => selectedEntryIndex != -1;
 
-        private SignalDispatcher signalDispatcher;
-
         public bool IsSelectingFurniture { get; private set; }
 
         public override Mode Mode => Mode.Placement;
@@ -59,6 +55,11 @@ namespace XRAccelerator.Gameplay
             base.DisableMode();
         }
 
+        private void OnFurniturePlaced(FurnitureGraphics newFurniture)
+        {
+            ModesController.ChangeMode(Mode.Inspection);
+        }
+
         private void OnStartedSelectingFurniture()
         {
             if (IsValidSelectedEntry)
@@ -68,7 +69,7 @@ namespace XRAccelerator.Gameplay
 
             selectedEntryIndex = -1;
             IsSelectingFurniture = true;
-            signalDispatcher.Dispatch<SelectingFurniture>();
+            placementReticle.DisablePreviewFurniture();
         }
 
         private void OnChangedFurnitureSelection()
@@ -82,7 +83,7 @@ namespace XRAccelerator.Gameplay
             SelectedEntry.Highlight();
 
             IsSelectingFurniture = false;
-            signalDispatcher.Dispatch(new FurnitureSelected {Config = GetSelectedFurniture()});
+            placementReticle.EnablePreviewFurniture(GetSelectedFurniture());
         }
 
         private void CreateCatalogEntries(List<FurnitureConfig> configs)
@@ -123,7 +124,7 @@ namespace XRAccelerator.Gameplay
             catalogScroll.onPanelChanged.AddListener(OnChangedFurnitureSelection);
             catalogScroll.onPanelSelecting.AddListener(OnStartedSelectingFurniture);
 
-            signalDispatcher = ServiceLocator.GetService<SignalDispatcher>();
+            placementReticle.Setup(OnFurniturePlaced);
         }
     }
 }

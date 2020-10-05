@@ -4,6 +4,8 @@ namespace XRAccelerator.Enums
     {
         Placement,
         Measurement,
-        Inspection
+        Inspection,
+        Painting,
+        Inactive
     }
 }
