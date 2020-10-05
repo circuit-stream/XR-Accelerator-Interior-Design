@@ -16,9 +16,6 @@ namespace XRAccelerator.Gameplay
         private readonly List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
 
         [SerializeField]
-        [Tooltip("Should the reticle scale with the distance to the camera")]
-        private bool scaleReticleWithDistance = true;
-        [SerializeField]
         [Tooltip("The reticle that will be instantiated")]
         private GameObject reticlePrefab;
 
@@ -26,6 +23,9 @@ namespace XRAccelerator.Gameplay
         [SerializeField]
         [Tooltip("Reference to the ARRaycastManager component")]
         private ARRaycastManager raycastManager;
+        [SerializeField]
+        [Tooltip("TooltipText")]
+        private ARPlaneManager arPlaneManager;
         [SerializeField]
         [Tooltip("Reference to the camera transform")]
         private Transform cameraTransform;
@@ -66,6 +66,7 @@ namespace XRAccelerator.Gameplay
 
             currentFurnitureConfig = newConfig;
             CreatePreviewFurniture();
+            UpdatePreviewVisibility();
         }
 
         public void DisablePreviewFurniture()
@@ -85,40 +86,30 @@ namespace XRAccelerator.Gameplay
 
         private void RepositionReticle()
         {
-            // TODO Arthur Optional: use GestureTransformationUtility.Raycast
-            if (raycastManager.Raycast(ScreenUtils.CenterScreen, raycastHits, TrackableType.PlaneWithinPolygon))
+            Pose hitPose = raycastHits[0].pose;
+
+            // Use hit pose and camera pose to check if the hit is not from the back of the plane
+            if (Vector3.Dot(cameraTransform.position - hitPose.position,
+                hitPose.rotation * Vector3.up) >= 0)
             {
-                Pose hitPose = raycastHits[0].pose;
+                spawnedReticleTransform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
+                spawnedReticleGameObject.SetActive(true);
 
-                // Use hit pose and camera pose to check if the hit is not from the back of the plane
-                if (Vector3.Dot(cameraTransform.position - hitPose.position,
-                    hitPose.rotation * Vector3.up) >= 0)
-                {
-                    spawnedReticleTransform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
-                    spawnedReticleGameObject.SetActive(true);
-
-                    return;
-                }
+                return;
             }
 
             spawnedReticleGameObject.SetActive(false);
         }
 
-        private void ScaleReticle()
+        private void UpdatePreviewVisibility()
         {
-            if (!scaleReticleWithDistance)
+            if (spawnedPreview == null)
             {
                 return;
             }
 
-            var currentDistance = Vector3.Distance(spawnedReticleTransform.position, cameraTransform.position);
-
-            var currentNormalizedDistance =
-                (Mathf.Abs(currentDistance - minScaleDistance) / (maxScaleDistance - minScaleDistance)) +
-                scaleMod;
-
-            spawnedReticleTransform.localScale = new Vector3(currentNormalizedDistance,
-                currentNormalizedDistance, currentNormalizedDistance);
+            ARPlane arPlane = arPlaneManager.trackables[raycastHits[0].trackableId];
+            spawnedPreview.gameObject.SetActive(spawnedReticleGameObject.activeSelf && currentFurnitureConfig.CanFitInPlane(arPlane));
         }
 
         private void CreateDefiniteFurniture()
@@ -150,8 +141,14 @@ namespace XRAccelerator.Gameplay
 
         private void Update()
         {
+            // TODO Arthur Optional: use GestureTransformationUtility.Raycast
+            if (!raycastManager.Raycast(ScreenUtils.CenterScreen, raycastHits, TrackableType.PlaneWithinPolygon))
+            {
+                return;
+            }
+
             RepositionReticle();
-            ScaleReticle();
+            UpdatePreviewVisibility();
         }
 
         private void Awake()

@@ -805,10 +805,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de288cdcae0444f6aadfca0dfc303d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleReticleWithDistance: 0
   reticlePrefab: {fileID: 3770400540450882647, guid: a19e33b2ec2be43ae8ce399b3c3a5351,
     type: 3}
   raycastManager: {fileID: 1072917972}
+  arPlaneManager: {fileID: 1072917973}
   cameraTransform: {fileID: 778907438}
 --- !u!4 &1502267917
 Transform:
@@ -1049,6 +1049,11 @@ PrefabInstance:
     - target: {fileID: 6035516119575686850, guid: e58035309c768a54eadd8358c62015c2,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035516119575686850, guid: e58035309c768a54eadd8358c62015c2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6035516119931992236, guid: e58035309c768a54eadd8358c62015c2,

@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 using XRAccelerator.Enums;
 using XRAccelerator.Gameplay;
 
@@ -7,6 +10,14 @@ namespace XRAccelerator.Configs
     [CreateAssetMenu(fileName = "New Furniture Config", menuName = "Configs/Furniture")]
     public class FurnitureConfig : ScriptableObject
     {
+        private static Dictionary<PlaneAlignment, FurnitureType> planeAlignmentToFurnitureType =
+            new Dictionary<PlaneAlignment, FurnitureType>
+            {
+                {PlaneAlignment.Vertical, FurnitureType.Wall},
+                {PlaneAlignment.HorizontalUp, FurnitureType.Floor},
+                {PlaneAlignment.HorizontalDown, FurnitureType.Ceiling},
+            };
+
         [SerializeField]
         [Tooltip("This furniture unique identifier")]
         public string Id;
@@ -30,5 +41,10 @@ namespace XRAccelerator.Configs
         [SerializeField]
         [Tooltip("How expensive is this furniture")]
         public float Price;
+
+        public bool CanFitInPlane(ARPlane arPlane)
+        {
+            return planeAlignmentToFurnitureType[arPlane.alignment] == FurnitureType;
+        }
     }
 }

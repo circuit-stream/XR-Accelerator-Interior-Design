@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GreenFurniture
   m_EditorClassIdentifier: 
   Id: green
-  FurnitureType: 0
+  FurnitureType: 1
   FurniturePrefab: {fileID: 8673607379191384442, guid: ed485458f94d846409f4aa729fa2d705,
     type: 3}
   furniturePreviewPrefab: {fileID: 7686098099251425997, guid: 045ad5114e12de64b998d5201da025d4,
