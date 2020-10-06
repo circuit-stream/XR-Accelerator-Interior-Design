@@ -38,3 +38,7 @@ ExportedObj/
 # Builds
 *.apk
 *.unitypackage
+
+# Third-Party
+**/ARFoundationRemoteInstaller*
+**/AR\ Foundation\ Remote\ Loader*
