@@ -30,20 +30,5 @@ namespace XRAccelerator.Gameplay
         {
             return !wasDestroyed && base.CanStartManipulationForGesture(gesture);
         }
-
-        // protected override bool CanStartManipulationForGesture(PinchGesture gesture)
-        // {
-        //     return !wasDestroyed && base.CanStartManipulationForGesture(gesture);
-        // }
-        //
-        // protected override bool CanStartManipulationForGesture(TwistGesture gesture)
-        // {
-        //     return !wasDestroyed && base.CanStartManipulationForGesture(gesture);
-        // }
-        //
-        // protected override bool CanStartManipulationForGesture(TwoFingerDragGesture gesture)
-        // {
-        //     return !wasDestroyed && base.CanStartManipulationForGesture(gesture);
-        // }
     }
 }

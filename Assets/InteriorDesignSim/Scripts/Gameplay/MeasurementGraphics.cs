@@ -44,7 +44,7 @@ namespace XRAccelerator.Gameplay
             var direction = lastAnchor1Position - lastAnchor2Position;
             var distance = direction.magnitude;
 
-            measurementText.text = ParseDistance(distance);
+            measurementText.text = ToStringWithUnitMeasure(distance);
 
             _transform.position = lastAnchor2Position + distance * 0.5f * direction.normalized + new Vector3(0, 0.05f, 0);
 
@@ -53,10 +53,12 @@ namespace XRAccelerator.Gameplay
             layoutGroup.enabled = true;
         }
 
-        private string ParseDistance(float distance)
+        private string ToStringWithUnitMeasure(float distance)
         {
             if (distance > 1)
+            {
                 return $"{distance:F2} m";
+            }
 
             return $"{(distance * 100):f0} cm";
         }
