@@ -100,7 +100,7 @@ namespace XRAccelerator.Gameplay
 
         private void UpdatePreviewVisibility()
         {
-            if (spawnedPreview == null)
+            if (spawnedPreview == null || raycastHits.Count == 0)
             {
                 return;
             }
