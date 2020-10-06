@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: blue
   FurnitureType: 0
-  FurniturePrefab: {fileID: 5928339840977306199, guid: 6231a0504e8c2da449aeb4d93bced2bf,
+  FurniturePrefab: {fileID: 6976225389923689690, guid: f702c8aac0f55aa4d8f3ea5d0d94b5e0,
     type: 3}
-  furniturePreviewPrefab: {fileID: 7686098099251425997, guid: eb2b1e51b5513294a9a8a28d9e1cabe8,
+  furniturePreviewPrefab: {fileID: 657565519851457187, guid: 5b4ce16e50236e6428bd40dd0b42ad9d,
     type: 3}
   Thumbnail: {fileID: 21300000, guid: 6d086a01fe7cb3d4d814c64d308da7f1, type: 3}
   Price: 0

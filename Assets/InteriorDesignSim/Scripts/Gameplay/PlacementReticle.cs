@@ -1,98 +1,122 @@
+using System;
 using System.Collections.Generic;
-using Signals;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.XR.Interaction.Toolkit;
 using XRAccelerator.Configs;
-using XRAccelerator.Services;
-using XRAccelerator.Signals;
 
 namespace XRAccelerator.Gameplay
 {
     public class PlacementReticle : MonoBehaviour
     {
-        private const float minScaleDistance = 0.0f;
-        private const float maxScaleDistance = 1.0f;
-        private const float scaleMod = 1.0f;
-
         private readonly List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
 
         [SerializeField]
-        [Tooltip("TooltipText")]
-        private bool scaleReticleWithDistance = true;
-        [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("The reticle that will be instantiated")]
         private GameObject reticlePrefab;
 
         [Header("Scene References")]
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Reference to the ARRaycastManager component")]
         private ARRaycastManager raycastManager;
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Reference to the ARPlaneManager component")]
+        private ARPlaneManager arPlaneManager;
+        [SerializeField]
+        [Tooltip("Reference to the camera transform")]
         private Transform cameraTransform;
 
         private GameObject spawnedReticleGameObject;
         private Transform spawnedReticleTransform;
 
-        private FurniturePreviewGraphics spawnedPreview;
+        private SafeARSelectionInteractable spawnedPreview;
         private FurnitureConfig currentFurnitureConfig;
+        private Action<FurnitureGraphics> furniturePlacedCallback;
 
-        public bool ValidReticlePosition => spawnedReticleGameObject.activeSelf;
-
-        public Transform GetReticleTransform()
+        public void Enable()
         {
-            return spawnedReticleTransform;
+            gameObject.SetActive(true);
+
+            if (currentFurnitureConfig != null)
+            {
+                CreatePreviewFurniture();
+            }
+        }
+
+        public void Disable()
+        {
+            if (spawnedPreview != null)
+            {
+                DestroyPreview();
+            }
+
+            gameObject.SetActive(false);
+        }
+
+        public void EnablePreviewFurniture(FurnitureConfig newConfig)
+        {
+            if (newConfig == currentFurnitureConfig)
+            {
+                return;
+            }
+
+            currentFurnitureConfig = newConfig;
+            CreatePreviewFurniture();
+            UpdatePreviewVisibility();
+        }
+
+        public void DisablePreviewFurniture()
+        {
+            if (spawnedPreview != null)
+            {
+                DestroyPreview();
+            }
+
+            currentFurnitureConfig = null;
+        }
+
+        public void Setup(Action<FurnitureGraphics> callback)
+        {
+            furniturePlacedCallback = callback;
         }
 
         private void RepositionReticle()
         {
-            // TODO Arthur Optional: use GestureTransformationUtility.Raycast
-            if (raycastManager.Raycast(ScreenUtils.CenterScreen, raycastHits, TrackableType.PlaneWithinPolygon))
+            Pose hitPose = raycastHits[0].pose;
+
+            // Use hit pose and camera pose to check if the hit is not from the back of the plane
+            if (Vector3.Dot(cameraTransform.position - hitPose.position,
+                hitPose.rotation * Vector3.up) >= 0)
             {
-                Pose hitPose = raycastHits[0].pose;
+                spawnedReticleTransform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
+                spawnedReticleGameObject.SetActive(true);
 
-                // Use hit pose and camera pose to check if the hit is not from the back of the plane
-                if (Vector3.Dot(cameraTransform.position - hitPose.position,
-                    hitPose.rotation * Vector3.up) >= 0)
-                {
-                    spawnedReticleTransform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
-                    spawnedReticleGameObject.SetActive(true);
-
-                    return;
-                }
+                return;
             }
 
             spawnedReticleGameObject.SetActive(false);
         }
 
-        private void ScaleReticle()
+        private void UpdatePreviewVisibility()
         {
-            if (!scaleReticleWithDistance)
+            if (spawnedPreview == null)
             {
                 return;
             }
 
-            var currentDistance = Vector3.Distance(spawnedReticleTransform.position, cameraTransform.position);
-
-            var currentNormalizedDistance =
-                (Mathf.Abs(currentDistance - minScaleDistance) / (maxScaleDistance - minScaleDistance)) +
-                scaleMod;
-
-            spawnedReticleTransform.localScale = new Vector3(currentNormalizedDistance,
-                currentNormalizedDistance, currentNormalizedDistance);
+            if (arPlaneManager.trackables.TryGetTrackable(raycastHits[0].trackableId, out ARPlane arPlane))
+            {
+                // TODO: Disable Interactions
+                spawnedPreview.gameObject.SetActive(spawnedReticleGameObject.activeSelf && currentFurnitureConfig.CanFitInPlane(arPlane));
+            }
         }
 
         private void CreateDefiniteFurniture()
         {
             var transformCache = spawnedPreview.transform;
             var newObject = Instantiate(currentFurnitureConfig.FurniturePrefab, transformCache.position, transformCache.rotation);
-
-            ServiceLocator.GetService<SignalDispatcher>().Dispatch(new FurniturePlaced
-            {
-                Config = currentFurnitureConfig,
-                Graphics = newObject
-            });
+            furniturePlacedCallback(newObject);
         }
 
         private void CreatePreviewFurniture()
@@ -101,47 +125,31 @@ namespace XRAccelerator.Gameplay
             spawnedPreview.transform.localPosition = Vector3.zero;
             spawnedPreview.transform.localRotation = Quaternion.identity;
 
-            spawnedPreview.OnWasTapped += OnPreviewWasTapped;
+            spawnedPreview.onSelectEnter.AddListener(OnPreviewWasTapped);
         }
 
-        private void OnPreviewWasTapped()
+        private void OnPreviewWasTapped(XRBaseInteractor interactor)
         {
-            StartCoroutine(spawnedPreview.DestroyXRInteractable());
             CreateDefiniteFurniture();
         }
 
-        private void OnFurnitureSelected(FurnitureSelected signalParams)
+        private void DestroyPreview()
         {
-            if (signalParams.Config == currentFurnitureConfig)
-            {
-                return;
-            }
-
-            currentFurnitureConfig = signalParams.Config;
-            CreatePreviewFurniture();
-        }
-
-        private void OnSelectingFurniture(SelectingFurniture signalParams)
-        {
-            if (spawnedPreview != null)
-            {
-                StartCoroutine(spawnedPreview.DestroyXRInteractable());
-            }
-
-            spawnedPreview = null;
-            currentFurnitureConfig = null;
-        }
-
-        private void OnFurniturePlaced(FurniturePlaced signalParams)
-        {
-            currentFurnitureConfig = null;
+            StartCoroutine(spawnedPreview.GetComponent<SafeARRotationInteractable>().DestroyXRInteractable());
+            StartCoroutine(spawnedPreview.DestroyXRInteractable(true));
             spawnedPreview = null;
         }
 
         private void Update()
         {
+            // TODO Arthur Optional: use GestureTransformationUtility.Raycast
+            if (!raycastManager.Raycast(ScreenUtils.CenterScreen, raycastHits, TrackableType.PlaneWithinPolygon))
+            {
+                return;
+            }
+
             RepositionReticle();
-            ScaleReticle();
+            UpdatePreviewVisibility();
         }
 
         private void Awake()
@@ -149,15 +157,6 @@ namespace XRAccelerator.Gameplay
             spawnedReticleGameObject = Instantiate(reticlePrefab);
             spawnedReticleGameObject.SetActive(false);
             spawnedReticleTransform = spawnedReticleGameObject.transform;
-            RegisterSignals();
-        }
-
-        private void RegisterSignals()
-        {
-            var signalDispatcher = ServiceLocator.GetService<SignalDispatcher>();
-            signalDispatcher.AddListener<FurnitureSelected>(OnFurnitureSelected);
-            signalDispatcher.AddListener<SelectingFurniture>(OnSelectingFurniture);
-            signalDispatcher.AddListener<FurniturePlaced>(OnFurniturePlaced);
         }
     }
 }

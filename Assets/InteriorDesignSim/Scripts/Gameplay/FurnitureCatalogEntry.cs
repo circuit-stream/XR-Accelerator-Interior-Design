@@ -11,7 +11,7 @@ namespace XRAccelerator.Gameplay
         private Image thumbnail;
 
         [SerializeField]
-        [Tooltip("Reference to the name text component")]
+        [Tooltip("[Optional] Reference to the name text component")]
         private Text nameText;
 
         [SerializeField]
@@ -24,6 +24,7 @@ namespace XRAccelerator.Gameplay
 
         public void Highlight()
         {
+            // This can be done with an animator to give artist more control, or by code for performance.
             var color = holderImage.color;
             color.a = 1;
             holderImage.color = color;
@@ -41,8 +42,11 @@ namespace XRAccelerator.Gameplay
             gameObject.name = $"[CatalogEntry] {furnitureConfig.Id}";
             thumbnail.sprite = furnitureConfig.Thumbnail;
 
-            // TODO Arthur: Localization
-            nameText.text = furnitureConfig.Id;
+            if (nameText != null)
+            {
+                // TODO Arthur: Localization
+                nameText.text = furnitureConfig.Id;
+            }
 
             Config = furnitureConfig;
         }

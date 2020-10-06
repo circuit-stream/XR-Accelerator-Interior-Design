@@ -1,4 +1,3 @@
-using Signals;
 using UnityEngine;
 using XRAccelerator.Services;
 
@@ -9,7 +8,6 @@ namespace XRAccelerator.Gameplay
         private void Awake()
         {
             ServiceLocator.RegisterService(new ConfigsProvider());
-            ServiceLocator.RegisterService(new SignalDispatcher());
 
             Destroy(this);
         }
