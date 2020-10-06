@@ -63,8 +63,8 @@ namespace XRAccelerator.Gameplay
         {
             foreach (var anchor in anchors)
             {
-                StartCoroutine(anchor.GetComponentInChildren<SafeARTranslationInteractable>().DestroyXRInteractable());
-                StartCoroutine(anchor.GetComponentInChildren<SafeARSelectionInteractable>().DestroyXRInteractable(true));
+                anchor.GetComponentInChildren<SafeARTranslationInteractable>().DestroyXRInteractable();
+                anchor.GetComponentInChildren<SafeARSelectionInteractable>().DestroyXRInteractable(true);
             }
 
             foreach (var graphics in measurementGraphics)
