@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit.AR;
 using XRAccelerator.Enums;
 
@@ -7,6 +10,14 @@ namespace XRAccelerator.Gameplay
 {
     public class MeasurementModeController : ModeController
     {
+        private static List<string> instructionTexts = new List<string>
+        {
+            "Tap to place measurement start point.",
+            "Tap to place measurement end point.",
+            "Tap to place additional measurements."
+        };
+
+        [Header("Measurement Mode Specific")]
         [SerializeField]
         [Tooltip("Reference to the MeasureAnchorPlacementInteractable component")]
         private MeasureAnchorPlacementInteractable anchorPlacementInteractable;
@@ -14,6 +25,14 @@ namespace XRAccelerator.Gameplay
         [SerializeField]
         [Tooltip("Reference to the measurement prefab")]
         private MeasurementGraphics measurementPrefab;
+
+        [SerializeField]
+        [Tooltip("Reference to the Instruction Text component")]
+        private TMP_Text InstructionsText;
+
+        [SerializeField]
+        [Tooltip("Reference to the holder of the clear measurement anchors button")]
+        private Button ClearButtonHolder;
 
         private readonly List<Transform> anchors = new List<Transform>();
         private readonly List<MeasurementGraphics> measurementGraphics = new List<MeasurementGraphics>();
@@ -34,14 +53,27 @@ namespace XRAccelerator.Gameplay
             base.DisableMode();
         }
 
-        private void DeleteAnchor()
+        private void ResetUI()
         {
-
+            InstructionsText.text = instructionTexts[Math.Min(instructionTexts.Count - 1, anchors.Count)];
+            ClearButtonHolder.gameObject.SetActive(anchors.Count >= 2);
         }
 
-        private void DeleteMeasurement()
+        private void DeleteAnchors()
         {
+            foreach (var anchor in anchors)
+            {
+                StartCoroutine(anchor.GetComponentInChildren<SafeARTranslationInteractable>().DestroyXRInteractable());
+                StartCoroutine(anchor.GetComponentInChildren<SafeARSelectionInteractable>().DestroyXRInteractable(true));
+            }
 
+            foreach (var graphics in measurementGraphics)
+            {
+                Destroy(graphics.gameObject);
+            }
+
+            anchors.Clear();
+            measurementGraphics.Clear();
         }
 
         private void CreateMeasurement(int anchor2Index)
@@ -58,17 +90,19 @@ namespace XRAccelerator.Gameplay
 
         private void OnAnchorPlaced(ARPlacementInteractable interactable, GameObject newAnchor)
         {
-            // TODO Arthur: Change UI text
-
             anchors.Add(newAnchor.transform);
             CreateMeasurement(anchors.Count - 1);
+            ResetUI();
         }
 
         public override void Setup(ModesController controller)
         {
             base.Setup(controller);
 
+            ResetUI();
+
             anchorPlacementInteractable.onObjectPlaced.AddListener(OnAnchorPlaced);
+            ClearButtonHolder.onClick.AddListener(DeleteAnchors);
         }
     }
 }

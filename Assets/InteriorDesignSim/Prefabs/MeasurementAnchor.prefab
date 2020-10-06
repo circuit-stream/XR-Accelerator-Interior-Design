@@ -182,8 +182,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5680251811824245206}
-  - component: {fileID: 5680251811824245207}
-  - component: {fileID: 5529728886008372604}
+  - component: {fileID: 2128103492307791847}
+  - component: {fileID: 2575720874483952525}
   m_Layer: 0
   m_Name: MeasurementAnchor
   m_TagString: Untagged
@@ -206,7 +206,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5680251811824245207
+--- !u!114 &2128103492307791847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5680251811824245200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c670bfa55d621474ea22ff77c1820163, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c48a2bc2d74f5496984f4c6b87943d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -248,8 +248,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
+  objectName: 
   m_SelectionVisualization: {fileID: 5680251810829075343}
---- !u!114 &5529728886008372604
+--- !u!114 &2575720874483952525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,7 +259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5680251811824245200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf6f41d7b58d4144a887c52ce97c699, type: 3}
+  m_Script: {fileID: 11500000, guid: 11334384621940baaffd52212baee184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -291,5 +292,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
+  objectName: 
   m_ObjectGestureTranslationMode: 0
   m_MaxTranslationDistance: 10

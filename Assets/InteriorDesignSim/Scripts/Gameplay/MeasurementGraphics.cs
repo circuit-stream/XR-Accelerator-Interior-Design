@@ -7,11 +7,11 @@ namespace XRAccelerator.Gameplay
     public class MeasurementGraphics : MonoBehaviour
     {
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Reference to the UI Text that displays the distance")]
         private TMP_Text measurementText;
 
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Reference to the layout group responsible for resizing the holder")]
         private LayoutGroup layoutGroup;
 
         private Transform anchor1;
