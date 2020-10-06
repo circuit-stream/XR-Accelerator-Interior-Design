@@ -15,6 +15,9 @@ MonoBehaviour:
   Id: Default
   brandIcon: {fileID: 0}
   FurnitureConfigs:
-  - {fileID: 11400000, guid: c25b86fdc6b23204cae5816798238da4, type: 2}
-  - {fileID: 11400000, guid: 7cfa80532bb5db047b8e0215574aec2f, type: 2}
-  - {fileID: 11400000, guid: b6d537259fdd1e042ba20598cd63988e, type: 2}
+  - {fileID: 11400000, guid: 825ac4e1092826d4980204bad7d1676e, type: 2}
+  - {fileID: 11400000, guid: 4eba39eed46e1de47a5ee40d40bfc319, type: 2}
+  - {fileID: 11400000, guid: 2317c0a36e84ca14cafa43249d583222, type: 2}
+  - {fileID: 11400000, guid: 825ac4e1092826d4980204bad7d1676e, type: 2}
+  - {fileID: 11400000, guid: 4eba39eed46e1de47a5ee40d40bfc319, type: 2}
+  - {fileID: 11400000, guid: 2317c0a36e84ca14cafa43249d583222, type: 2}
