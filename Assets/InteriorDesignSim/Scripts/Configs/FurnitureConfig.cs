@@ -28,7 +28,7 @@ namespace XRAccelerator.Configs
 
         [SerializeField]
         [Tooltip("The prefab instantiated")]
-        public FurnitureGraphics FurniturePrefab;
+        public SafeARSelectionInteractable FurniturePrefab;
 
         [SerializeField]
         [Tooltip("The preview prefab showed during placement")]

@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine.XR.Interaction.Toolkit.AR;
 
 namespace XRAccelerator.Gameplay
@@ -9,12 +9,13 @@ namespace XRAccelerator.Gameplay
 
         // [XRToolkitWorkaround] Something is keeping a reference to this interactable
         // this way we can kill the object and prevent NullReferenceExceptions.
-        public IEnumerator DestroyXRInteractable(bool destroyGameObject = false)
+        public async void DestroyXRInteractable(bool destroyGameObject = false)
         {
             colliders.Clear();
             wasDestroyed = true;
             gameObject.SetActive(false);
-            yield return null;
+
+            await Task.Delay(100);
 
             if (destroyGameObject)
             {

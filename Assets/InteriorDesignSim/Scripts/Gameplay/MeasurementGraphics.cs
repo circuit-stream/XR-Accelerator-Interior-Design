@@ -14,6 +14,10 @@ namespace XRAccelerator.Gameplay
         [Tooltip("Reference to the layout group responsible for resizing the holder")]
         private LayoutGroup layoutGroup;
 
+        [SerializeField]
+        [Tooltip("Reference to the lineRenderer component")]
+        private LineRenderer lineRenderer;
+
         private Transform anchor1;
         private Vector3 lastAnchor1Position;
 
@@ -44,19 +48,25 @@ namespace XRAccelerator.Gameplay
             var direction = lastAnchor1Position - lastAnchor2Position;
             var distance = direction.magnitude;
 
-            measurementText.text = ParseDistance(distance);
+            measurementText.text = ToStringWithUnitMeasure(distance);
 
-            _transform.position = lastAnchor2Position + distance * 0.5f * direction.normalized + new Vector3(0, 0.05f, 0);
+            _transform.position = lastAnchor2Position + distance * 0.5f * direction.normalized + new Vector3(0, 0.04f, 0);
 
             layoutGroup.enabled = false;
             Canvas.ForceUpdateCanvases();
             layoutGroup.enabled = true;
+
+            lastAnchor1Position.y += 0.002f;
+            lastAnchor2Position.y += 0.002f;
+            lineRenderer.SetPositions(new[] {lastAnchor1Position, lastAnchor2Position});
         }
 
-        private string ParseDistance(float distance)
+        private string ToStringWithUnitMeasure(float distance)
         {
             if (distance > 1)
+            {
                 return $"{distance:F2} m";
+            }
 
             return $"{(distance * 100):f0} cm";
         }

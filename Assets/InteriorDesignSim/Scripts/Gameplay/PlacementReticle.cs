@@ -32,7 +32,7 @@ namespace XRAccelerator.Gameplay
 
         private SafeARSelectionInteractable spawnedPreview;
         private FurnitureConfig currentFurnitureConfig;
-        private Action<FurnitureGraphics> furniturePlacedCallback;
+        private Action<SafeARSelectionInteractable> furniturePlacedCallback;
 
         public void Enable()
         {
@@ -76,7 +76,7 @@ namespace XRAccelerator.Gameplay
             currentFurnitureConfig = null;
         }
 
-        public void Setup(Action<FurnitureGraphics> callback)
+        public void Setup(Action<SafeARSelectionInteractable> callback)
         {
             furniturePlacedCallback = callback;
         }
@@ -135,8 +135,8 @@ namespace XRAccelerator.Gameplay
 
         private void DestroyPreview()
         {
-            StartCoroutine(spawnedPreview.GetComponent<SafeARRotationInteractable>().DestroyXRInteractable());
-            StartCoroutine(spawnedPreview.DestroyXRInteractable(true));
+            spawnedPreview.GetComponent<SafeARRotationInteractable>().DestroyXRInteractable();
+            spawnedPreview.DestroyXRInteractable(true);
             spawnedPreview = null;
         }
 

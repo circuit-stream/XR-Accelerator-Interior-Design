@@ -27,6 +27,8 @@ namespace XRAccelerator.Gameplay
         [Tooltip("Catalog entry prefab reference")]
         private FurnitureCatalogEntry catalogEntryPrefab;
 
+        private SafeARSelectionInteractable instantiatedFurniture;
+
         private List<FurnitureCatalogEntry> catalogEntries;
         private int selectedEntryIndex;
         private FurnitureCatalogEntry SelectedEntry => catalogEntries[selectedEntryIndex];
@@ -43,6 +45,12 @@ namespace XRAccelerator.Gameplay
 
         public override void EnableMode()
         {
+            if (instantiatedFurniture != null)
+            {
+                modesController.ChangeMode(Mode.Inspection);
+                return;
+            }
+
             placementReticle.Enable();
 
             base.EnableMode();
@@ -55,9 +63,26 @@ namespace XRAccelerator.Gameplay
             base.DisableMode();
         }
 
-        private void OnFurniturePlaced(FurnitureGraphics newFurniture)
+        private void OnFurnitureDeleteRequest()
         {
-            ModesController.ChangeMode(Mode.Inspection);
+            instantiatedFurniture.DestroyXRInteractable(true);
+            instantiatedFurniture = null;
+
+            var inspectionModeController = modesController.GetMode(Mode.Inspection) as InspectionModeController;
+            inspectionModeController.onDeleteRequest -= OnFurnitureDeleteRequest;
+
+            modesController.ChangeMode(Mode.Placement);
+        }
+
+        private void OnFurniturePlaced(SafeARSelectionInteractable newFurniture)
+        {
+            instantiatedFurniture = newFurniture;
+            instantiatedFurniture.onSelectEnter.AddListener(interactor => modesController.ChangeMode(Mode.Inspection));
+
+            var inspectionModeController = modesController.GetMode(Mode.Inspection) as InspectionModeController;
+            inspectionModeController.onDeleteRequest += OnFurnitureDeleteRequest;
+
+            modesController.ChangeMode(Mode.Inspection);
         }
 
         private void OnStartedSelectingFurniture()

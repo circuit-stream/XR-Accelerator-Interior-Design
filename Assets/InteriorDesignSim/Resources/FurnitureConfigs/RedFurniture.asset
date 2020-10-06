@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: red
   FurnitureType: 2
-  FurniturePrefab: {fileID: 6462594619070518913, guid: 74b4300f22dd0994a84ebf4d9dff5f9d,
+  FurniturePrefab: {fileID: 4775716582657293296, guid: 74b4300f22dd0994a84ebf4d9dff5f9d,
     type: 3}
   furniturePreviewPrefab: {fileID: 3685330365517709901, guid: fac0a3eada2cd6744bb37455bc051638,
     type: 3}

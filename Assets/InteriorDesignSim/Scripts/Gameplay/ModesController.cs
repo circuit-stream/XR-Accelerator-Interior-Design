@@ -31,6 +31,11 @@ namespace XRAccelerator.Gameplay
             CurrentModeController.EnableMode();
         }
 
+        public ModeController GetMode(Mode targetMode)
+        {
+            return controllersByMode[targetMode];
+        }
+
         private void SetupModes()
         {
             currentMode = Mode.Inactive;
