@@ -76,6 +76,7 @@ MonoBehaviour:
   m_CustomReticle: {fileID: 0}
   objectName: 
   m_SelectionVisualization: {fileID: 0}
+  forceSelection: 0
 --- !u!114 &5110936354515091493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,3 +122,4 @@ MonoBehaviour:
   objectName: 
   m_RotationRateDegreesDrag: 100
   m_RotationRateDegreesTwist: 2.5
+  forceSelection: 1
