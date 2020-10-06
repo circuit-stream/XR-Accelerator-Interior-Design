@@ -69,7 +69,7 @@ namespace XRAccelerator.Gameplay
             instantiatedFurniture = null;
 
             var inspectionModeController = modesController.GetMode(Mode.Inspection) as InspectionModeController;
-            inspectionModeController.onDeleteRequest -= OnFurnitureDeleteRequest;
+            inspectionModeController.OnDeleteRequest -= OnFurnitureDeleteRequest;
 
             modesController.ChangeMode(Mode.Placement);
         }
@@ -80,7 +80,7 @@ namespace XRAccelerator.Gameplay
             instantiatedFurniture.onSelectEnter.AddListener(interactor => modesController.ChangeMode(Mode.Inspection));
 
             var inspectionModeController = modesController.GetMode(Mode.Inspection) as InspectionModeController;
-            inspectionModeController.onDeleteRequest += OnFurnitureDeleteRequest;
+            inspectionModeController.OnDeleteRequest += OnFurnitureDeleteRequest;
 
             modesController.ChangeMode(Mode.Inspection);
         }

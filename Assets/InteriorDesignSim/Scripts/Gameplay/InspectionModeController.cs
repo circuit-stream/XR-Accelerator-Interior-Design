@@ -13,13 +13,13 @@ namespace XRAccelerator.Gameplay
         [Tooltip("Reference to the holder of the clear measurement anchors button")]
         private Button deleteButton;
 
-        public Action onDeleteRequest;
+        public Action OnDeleteRequest;
 
         public override void Setup(ModesController controller)
         {
             base.Setup(controller);
 
-            deleteButton.onClick.AddListener(() => onDeleteRequest?.Invoke());
+            deleteButton.onClick.AddListener(() => OnDeleteRequest?.Invoke());
         }
     }
 }
