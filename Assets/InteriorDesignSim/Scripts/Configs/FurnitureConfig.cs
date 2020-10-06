@@ -32,7 +32,7 @@ namespace XRAccelerator.Configs
 
         [SerializeField]
         [Tooltip("The preview prefab showed during placement")]
-        public FurniturePreviewGraphics furniturePreviewPrefab;
+        public SafeARSelectionInteractable furniturePreviewPrefab;
 
         [SerializeField]
         [Tooltip("Furniture preview displayed during furniture seleciton")]

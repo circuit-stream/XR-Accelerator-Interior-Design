@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.XR.Interaction.Toolkit;
 using XRAccelerator.Configs;
 
 namespace XRAccelerator.Gameplay
 {
     public class PlacementReticle : MonoBehaviour
     {
-        private const float minScaleDistance = 0.0f;
-        private const float maxScaleDistance = 1.0f;
-        private const float scaleMod = 1.0f;
-
         private readonly List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
 
         [SerializeField]
@@ -24,7 +21,7 @@ namespace XRAccelerator.Gameplay
         [Tooltip("Reference to the ARRaycastManager component")]
         private ARRaycastManager raycastManager;
         [SerializeField]
-        [Tooltip("TooltipText")]
+        [Tooltip("Reference to the ARPlaneManager component")]
         private ARPlaneManager arPlaneManager;
         [SerializeField]
         [Tooltip("Reference to the camera transform")]
@@ -33,7 +30,7 @@ namespace XRAccelerator.Gameplay
         private GameObject spawnedReticleGameObject;
         private Transform spawnedReticleTransform;
 
-        private FurniturePreviewGraphics spawnedPreview;
+        private SafeARSelectionInteractable spawnedPreview;
         private FurnitureConfig currentFurnitureConfig;
         private Action<FurnitureGraphics> furniturePlacedCallback;
 
@@ -108,8 +105,11 @@ namespace XRAccelerator.Gameplay
                 return;
             }
 
-            ARPlane arPlane = arPlaneManager.trackables[raycastHits[0].trackableId];
-            spawnedPreview.gameObject.SetActive(spawnedReticleGameObject.activeSelf && currentFurnitureConfig.CanFitInPlane(arPlane));
+            if (arPlaneManager.trackables.TryGetTrackable(raycastHits[0].trackableId, out ARPlane arPlane))
+            {
+                // TODO: Disable Interactions
+                spawnedPreview.gameObject.SetActive(spawnedReticleGameObject.activeSelf && currentFurnitureConfig.CanFitInPlane(arPlane));
+            }
         }
 
         private void CreateDefiniteFurniture()
@@ -125,17 +125,18 @@ namespace XRAccelerator.Gameplay
             spawnedPreview.transform.localPosition = Vector3.zero;
             spawnedPreview.transform.localRotation = Quaternion.identity;
 
-            spawnedPreview.OnWasTapped += OnPreviewWasTapped;
+            spawnedPreview.onSelectEnter.AddListener(OnPreviewWasTapped);
         }
 
-        private void OnPreviewWasTapped()
+        private void OnPreviewWasTapped(XRBaseInteractor interactor)
         {
             CreateDefiniteFurniture();
         }
 
         private void DestroyPreview()
         {
-            StartCoroutine(spawnedPreview.DestroyXRInteractable());
+            StartCoroutine(spawnedPreview.GetComponent<SafeARRotationInteractable>().DestroyXRInteractable());
+            StartCoroutine(spawnedPreview.DestroyXRInteractable(true));
             spawnedPreview = null;
         }
 
