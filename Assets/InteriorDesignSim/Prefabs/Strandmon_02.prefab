@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6ad6104496db6bc468ca46c7670b4c1e, type: 2}
+  - {fileID: 2100000, guid: aac85dbaac34e1749a160960871ddc6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 6848661408964513549}
   - component: {fileID: 6877555644412284475}
   - component: {fileID: 6869960067656073027}
-  - component: {fileID: 5520600166598102121}
   m_Layer: 0
   m_Name: Strandmon
   m_TagString: Untagged
@@ -138,7 +137,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6ad6104496db6bc468ca46c7670b4c1e, type: 2}
+  - {fileID: 2100000, guid: aac85dbaac34e1749a160960871ddc6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -159,20 +158,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5520600166598102121
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6845977564075892903}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: 2a24151dbce2429419a76d2cb61a2e30, type: 3}
 --- !u!1 &6846004961181250057
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,4 +189,4 @@ Transform:
   - {fileID: 6848688415411155639}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
