@@ -12,7 +12,7 @@ namespace XRAccelerator.Gameplay
         [Tooltip("Reference to this mode tab button")]
         public Button TabButton;
 
-        protected ModesController ModesController;
+        protected ModesController modesController;
         private Animator tabAnimator;
 
         private bool HasTabEntry => TabButton != null;
@@ -43,11 +43,11 @@ namespace XRAccelerator.Gameplay
 
         public virtual void Setup(ModesController controller)
         {
-            ModesController = controller;
+            modesController = controller;
 
             if (HasTabEntry)
             {
-                TabButton.onClick.AddListener(() => ModesController.ChangeMode(Mode));
+                TabButton.onClick.AddListener(() => modesController.ChangeMode(Mode));
                 tabAnimator = TabButton.GetComponent<Animator>();
             }
         }

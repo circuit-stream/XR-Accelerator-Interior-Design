@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
-  m_Name: RedFurniture
+  m_Name: FurnitureStrandmon1
   m_EditorClassIdentifier: 
-  Id: red
-  FurnitureType: 2
-  FurniturePrefab: {fileID: 4775716582657293296, guid: 74b4300f22dd0994a84ebf4d9dff5f9d,
+  Id: Strandmon1
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 4775685203557700298, guid: 9b0ed2a9e4d72264b8f685881d5ac7f2,
     type: 3}
-  furniturePreviewPrefab: {fileID: 3685330365517709901, guid: fac0a3eada2cd6744bb37455bc051638,
+  furniturePreviewPrefab: {fileID: 3383625569685670489, guid: c2bf34247375f374aa662bb9b2be6693,
     type: 3}
-  Thumbnail: {fileID: 21300000, guid: ea31fe2c0deee264fbcb81e83cc06c56, type: 3}
+  Thumbnail: {fileID: 21300000, guid: 3aa21307fcb4aed48972ee0db1a3f049, type: 3}
   Price: 0
