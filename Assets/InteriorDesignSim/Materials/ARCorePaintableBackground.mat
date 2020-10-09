@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ARBackground
+  m_Name: ARCorePaintableBackground
   m_Shader: {fileID: 4800000, guid: cf60b2b620cd2644ba45d26f9c34e655, type: 3}
   m_ShaderKeywords: ARCORE_ENVIRONMENT_DEPTH_ENABLED
   m_LightmapFlags: 4

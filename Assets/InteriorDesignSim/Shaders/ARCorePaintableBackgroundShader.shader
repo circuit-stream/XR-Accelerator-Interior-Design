@@ -4,10 +4,6 @@
     {
         _MainTex("Texture", 2D) = "white" {}
         _EnvironmentDepth("Texture", 2D) = "black" {}
-//        _FromColor("FromColor", Color) = (0, 0, 0, 0)
-//        _TargetColor("TargetColor", Color) = (0, 0, 0, 0)
-//        _Range("Range", float) = 0.1
-//        _Fuzziness("Fuzziness", float) = 0.1
     }
 
     SubShader
@@ -130,17 +126,8 @@
                 result = GammaToLinearSpace(result);
 #endif // !UNITY_COLORSPACE_GAMMA
 
-
-//                _FromColor = vec4(0.0, 0.0, 0.0, 0.0);
-//                _TargetColor = vec4(1.0, 0.0, 0.0. 0.0);
-
-
                 vec3 replacedColor;
-//                Unity_ReplaceColor_float(result, vec3(0.0, 0.0, 0.0), vec3(1.0, 0.0, 0.0), 0.1, replacedColor, 0.1);
-                Unity_ReplaceColor_float(result, vec3(0.0, 0.0, 0.0), vec3(1.0, 0.0, 0.0), _Range, replacedColor, _Fuzziness);
-//                Unity_ReplaceColor_float(result, _FromColor, _TargetColor, _Range, replacedColor, _Fuzziness);
-//                Unity_ReplaceColor_float(result, vec3(_FromColor.r, _FromColor.g, _FromColor.b), vec3(_TargetColor.r, _TargetColor.g, _TargetColor.b), _Range, replacedColor, _Fuzziness);
-//                Unity_ReplaceColor_float(result, _FromColor, _TargetColor, 0.1, replacedColor, 0.1);
+                Unity_ReplaceColor_float(result, vec3(_FromColor.r, _FromColor.g, _FromColor.b), vec3(_TargetColor.r, _TargetColor.g, _TargetColor.b), _Range, replacedColor, _Fuzziness);
 
                 gl_FragColor = vec4(replacedColor, 1.0);
                 gl_FragDepth = depth;
