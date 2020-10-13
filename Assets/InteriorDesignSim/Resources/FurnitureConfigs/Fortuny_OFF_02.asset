@@ -18,5 +18,5 @@ MonoBehaviour:
     type: 3}
   furniturePreviewPrefab: {fileID: 1487043354712474667, guid: 846bff2b89a5e7a4aa50aa9de90b2c87,
     type: 3}
-  Thumbnail: {fileID: 0}
+  Thumbnail: {fileID: 21300000, guid: beaf464f48ac8064b9d5a0a5d0dca484, type: 3}
   Price: 0
