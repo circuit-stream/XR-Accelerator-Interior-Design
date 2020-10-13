@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Flottebo
+  m_EditorClassIdentifier: 
+  Id: Flottebo
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 6152309332746437432, guid: 30562f4cd1e9a1b48991a40a3c57261c,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 7815149715315642844, guid: 6ae1c155e5b1bd947b8ccb095bd9d4b1,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 9edd1e57617755c4588cc9dd0b708eb5, type: 3}
+  Price: 0

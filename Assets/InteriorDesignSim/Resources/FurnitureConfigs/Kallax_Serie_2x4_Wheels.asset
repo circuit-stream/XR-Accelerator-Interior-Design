@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Kallax_Serie_2x4_Wheels
+  m_EditorClassIdentifier: 
+  Id: Kallax_Serie_2x4_Wheels
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 6186331971283590822, guid: f160ad38d08014a459e3badad85b1373,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 2454440060350461180, guid: dcba8801dff3665409ea8268f1574d63,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: e4fbd6cfdebeca443bd95c02983a03ca, type: 3}
+  Price: 0

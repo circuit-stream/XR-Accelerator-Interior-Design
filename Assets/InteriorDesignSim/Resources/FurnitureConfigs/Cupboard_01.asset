@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Cupboard_01
+  m_EditorClassIdentifier: 
+  Id: Cupboard_01
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 2884570846862563918, guid: 2cc747f8e2a4b1344ac048d9cc8a98a2,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 6457972899325077963, guid: 4b8d7bc9ff80141408e6ee888f03d34e,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: ab29b75c22331394e9723d52c976b966, type: 3}
+  Price: 0

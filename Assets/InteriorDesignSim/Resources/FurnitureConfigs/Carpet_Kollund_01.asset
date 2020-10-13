@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Carpet_Kollund_01
+  m_EditorClassIdentifier: 
+  Id: Carpet_Kollund_01
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 4925380682916878964, guid: 5765aac673db4be42a2bf7019a59e16e,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 1748129454911371692, guid: 94142e15b606caa40bc753e5a25ce744,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 29372b75736696341ac8007f0861370e, type: 3}
+  Price: 0

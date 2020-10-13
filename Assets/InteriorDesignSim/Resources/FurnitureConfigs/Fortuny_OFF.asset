@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Fortuny_OFF
+  m_EditorClassIdentifier: 
+  Id: Fortuny_OFF
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 1870657433453687929, guid: b8f4d9ea1ab165b4e95cd46d387afc32,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 5387609072474833005, guid: 40a428fb3faecfa4288f37608855ea31,
+    type: 3}
+  Thumbnail: {fileID: 0}
+  Price: 0

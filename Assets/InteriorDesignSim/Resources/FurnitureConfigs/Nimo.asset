@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Nimo
+  m_EditorClassIdentifier: 
+  Id: Nimo
+  FurnitureType: 2
+  FurniturePrefab: {fileID: 5247103230255601276, guid: d1b66fe4349f567449e2ba3431572253,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 2327100793302126675, guid: 69ccd00abd67b634b9d9c91d1388a5f6,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 32d97856c8619654fab33214671b2813, type: 3}
+  Price: 0

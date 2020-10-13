@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Kallax_Chest
+  m_EditorClassIdentifier: 
+  Id: Kallax_Chest
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 2978456028476236975, guid: bbf1e17e021906e4f8c8d5ad38a40afe,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 4653509864475154869, guid: 52b094e3fad9fc745826a2df82e7a2ef,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: dc530c68a6df5a24fbd3a7271ce1b927, type: 3}
+  Price: 0

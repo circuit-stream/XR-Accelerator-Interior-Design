@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Desk_01
+  m_EditorClassIdentifier: 
+  Id: Desk_01
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 2569530438955864928, guid: c4b0e4eaf7cd185439ef41b49c39f8e2,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 8337920154928938150, guid: c70045b41206f644a8fe7af99f2d8760,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 2a8b43a0fe527774d85a09dea5acbda1, type: 3}
+  Price: 0

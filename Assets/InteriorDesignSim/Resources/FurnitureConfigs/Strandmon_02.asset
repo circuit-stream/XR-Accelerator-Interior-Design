@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Strandmon_02
+  m_EditorClassIdentifier: 
+  Id: Strandmon_02
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 1052938058262151152, guid: 7c3cb0708295bfa4a9bfade98b99dea6,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 5632387060749761382, guid: d623b7407a7cefa4d98b2f495e5e5cfd,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 8a40c436716f43240a9f50c608237392, type: 3}
+  Price: 0

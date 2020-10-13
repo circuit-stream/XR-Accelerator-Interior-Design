@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Stockholm_Suspension
+  m_EditorClassIdentifier: 
+  Id: Stockholm_Suspension
+  FurnitureType: 2
+  FurniturePrefab: {fileID: 8111140792005224148, guid: acc5049a775c4bc47812a782fa0b9283,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 2599012883739571579, guid: b3d81a4740801324f919f2f2e3fafddc,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 0187197454a9ab6469fae9d8a1b0f924, type: 3}
+  Price: 0

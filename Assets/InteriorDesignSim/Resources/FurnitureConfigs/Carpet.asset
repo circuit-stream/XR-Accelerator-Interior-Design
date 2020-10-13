@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Carpet
+  m_EditorClassIdentifier: 
+  Id: Carpet
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 4297212615819383060, guid: 690b50695e103b540a9259a687ef5bb8,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 6317018853236562434, guid: d3f8194f1f54c674287655a6924bbc38,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 5db4ef27faf2df44d925927bf189b63d, type: 3}
+  Price: 0

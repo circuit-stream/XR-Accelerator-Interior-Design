@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Kallax_Serie_5x5
+  m_EditorClassIdentifier: 
+  Id: Kallax_Serie_5x5
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 1388789073752666083, guid: 601a9f900164a544d81d3e838056e5e8,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 5694716915873376705, guid: 176eb662f56ba684d8d5094c4d3a2fcb,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 4ddb6294bc4267e4b8a2d4a5678b4258, type: 3}
+  Price: 0
