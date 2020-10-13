@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7889466686092465488}
   - component: {fileID: 6044883727210728054}
   m_Layer: 0
-  m_Name: MeasurementTool
+  m_Name: MeasurementAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
