@@ -76,7 +76,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
-  objectName: 
   m_SelectionVisualization: {fileID: 0}
 --- !u!114 &6044883727210728054
 MonoBehaviour:
@@ -120,7 +119,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
-  objectName: 
   m_ObjectGestureTranslationMode: 0
   m_MaxTranslationDistance: 10
 --- !u!1 &7324708445340011327
@@ -134,7 +132,7 @@ GameObject:
   - component: {fileID: 1235905108059751172}
   - component: {fileID: 1319480123788446302}
   - component: {fileID: 6311042159956659837}
-  - component: {fileID: 395030151386065864}
+  - component: {fileID: 8872779124887864468}
   m_Layer: 0
   m_Name: cylinder
   m_TagString: Untagged
@@ -203,8 +201,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &395030151386065864
-MeshCollider:
+--- !u!135 &8872779124887864468
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -213,10 +211,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4632596647708219413, guid: e37e5971633c43941887b3b7aae044a3, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.45
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7873549929625703965
 GameObject:
   m_ObjectHideFlags: 0
