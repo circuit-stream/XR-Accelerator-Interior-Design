@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4260012520197456}
   - component: {fileID: 33895989750937674}
   - component: {fileID: 23700432450215754}
+  - component: {fileID: 598954398096975718}
   m_Layer: 0
   m_Name: Hemnes_Living_Glass
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &598954398096975718
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067319796312794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 36d17851db2684d41ab4c82e07f99ed7, type: 3}
 --- !u!1 &1171316776248738
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 4295766664615602}
   - component: {fileID: 33088098132466458}
   - component: {fileID: 23421798587598036}
+  - component: {fileID: 1163430309203184869}
   m_Layer: 0
   m_Name: Hemnes_Living
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1163430309203184869
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171316776248738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 36d17851db2684d41ab4c82e07f99ed7, type: 3}
 --- !u!1 &1679953161277590
 GameObject:
   m_ObjectHideFlags: 0

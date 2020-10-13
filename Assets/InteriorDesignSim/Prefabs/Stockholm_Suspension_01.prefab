@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2347507343727180329}
   - component: {fileID: 2347507343724313097}
   - component: {fileID: 2347507343725410505}
+  - component: {fileID: 7632196574632868539}
   m_Layer: 0
   m_Name: Stockholm_Suspension_Glass
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7632196574632868539
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347507343727339017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 0caceceb6b0242e48b2911a2c47d8e71, type: 3}
 --- !u!1 &2347507343727339019
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 2347507343727180331}
   - component: {fileID: 2347507343724313099}
   - component: {fileID: 2347507343725410507}
+  - component: {fileID: 5252082443593602123}
   m_Layer: 0
   m_Name: Stockholm_Suspension_Cable
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5252082443593602123
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347507343727339019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 0caceceb6b0242e48b2911a2c47d8e71, type: 3}
 --- !u!1 &2347507343727339021
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 2347507343727180333}
   - component: {fileID: 2347507343724313101}
   - component: {fileID: 2347507343725410509}
+  - component: {fileID: 5282630938612727982}
   m_Layer: 0
   m_Name: Stockholm_Suspension
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5282630938612727982
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347507343727339021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 0caceceb6b0242e48b2911a2c47d8e71, type: 3}
 --- !u!1 &2347507343727339023
 GameObject:
   m_ObjectHideFlags: 0

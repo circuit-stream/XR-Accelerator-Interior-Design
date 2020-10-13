@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Hemnes_Bedside_02
+  m_EditorClassIdentifier: 
+  Id: Hemnes_Bedside_02
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 3409251726603078940, guid: a9c60d167b1e39940a4050f54dc6dbbc,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 2757739105773165371, guid: e62568eadf215df40b983b33aa9b11d3,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 0ef8bc80bc04c834298e131cdf20e6e2, type: 3}
+  Price: 0

@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 7616292039004478900}
   - component: {fileID: 7622588081113636626}
   - component: {fileID: 7631840446275688854}
+  - component: {fileID: 853544821181675580}
   m_Layer: 0
   m_Name: Kallax_5x5
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &853544821181675580
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619782071945971506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 719740ac2e760d2498976b9fab674ce4, type: 3}

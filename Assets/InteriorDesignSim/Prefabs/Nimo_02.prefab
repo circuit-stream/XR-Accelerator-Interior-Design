@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 926534646271650673}
   - component: {fileID: 926534646272453457}
   - component: {fileID: 926534646273419665}
+  - component: {fileID: 2804856606842384851}
   m_Layer: 0
   m_Name: Nimo_Bulb
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2804856606842384851
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926534646271489873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 9b7b701a571d3f14b9b7075443453314, type: 3}
 --- !u!1 &926534646271489875
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 926534646271650675}
   - component: {fileID: 926534646272453459}
   - component: {fileID: 926534646273419667}
+  - component: {fileID: 5065390382374023222}
   m_Layer: 0
   m_Name: Nimo
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5065390382374023222
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926534646271489875}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 9b7b701a571d3f14b9b7075443453314, type: 3}
 --- !u!1 &926534646271489877
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 926534646271650677}
   - component: {fileID: 926534646272453461}
   - component: {fileID: 926534646273419669}
+  - component: {fileID: 4950588840170407678}
   m_Layer: 0
   m_Name: Nimo_Lampshade
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4950588840170407678
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926534646271489877}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 9b7b701a571d3f14b9b7075443453314, type: 3}
 --- !u!1 &926534646271489879
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +293,7 @@ GameObject:
   - component: {fileID: 926534646271650679}
   - component: {fileID: 926534646272453463}
   - component: {fileID: 926534646273419671}
+  - component: {fileID: 4134421186619189744}
   m_Layer: 0
   m_Name: Nimo_Ceiling
   m_TagString: Untagged
@@ -316,6 +362,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4134421186619189744
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926534646271489879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 9b7b701a571d3f14b9b7075443453314, type: 3}
 --- !u!1 &926534646271489881
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +422,7 @@ GameObject:
   - component: {fileID: 926534646271650683}
   - component: {fileID: 926534646272453467}
   - component: {fileID: 926534646273419675}
+  - component: {fileID: 2726311674215560678}
   m_Layer: 0
   m_Name: Nimo_Line
   m_TagString: Untagged
@@ -430,3 +491,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2726311674215560678
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926534646271489883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 9b7b701a571d3f14b9b7075443453314, type: 3}

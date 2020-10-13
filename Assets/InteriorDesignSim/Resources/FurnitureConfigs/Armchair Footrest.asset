@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Armchair Footrest
+  m_EditorClassIdentifier: 
+  Id: Armchair Footrest
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 4454985962534094518, guid: a0b4b0d99d8748c408f4b977abb040b5,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 6653553470101935899, guid: 8883768ee3b23c9478fcd1c2a82cbea4,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: db6e199a099c9c6479f3982c83bd4331, type: 3}
+  Price: 0

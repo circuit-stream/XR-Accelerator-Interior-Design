@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Lisabo
+  m_EditorClassIdentifier: 
+  Id: Lisabo
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 4505828327381079487, guid: 9d0470f9bfed1db49a9be2438b0977ed,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 1159193868639755882, guid: 2457d80ee97f127429869a35deab2298,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 772a1dd8fc4c7924f8d7bdd0eeb21b5d, type: 3}
+  Price: 0

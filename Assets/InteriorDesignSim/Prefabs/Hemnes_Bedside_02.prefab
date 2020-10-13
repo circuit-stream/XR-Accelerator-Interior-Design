@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6588861772173474002}
   - component: {fileID: 6563606343648774974}
   - component: {fileID: 6572046761416858096}
+  - component: {fileID: 4743522804021058023}
   m_Layer: 0
   m_Name: Hemnes_Bedside
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4743522804021058023
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585494349020816506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 0a63b9a14aab6194284b244eebdb5997, type: 3}
 --- !u!1 &6586100858188162098
 GameObject:
   m_ObjectHideFlags: 0

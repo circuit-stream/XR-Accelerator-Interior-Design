@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Brunsta_01
+  m_EditorClassIdentifier: 
+  Id: Brunsta_01
+  FurnitureType: 2
+  FurniturePrefab: {fileID: 1634462744129591863, guid: 1566270f930fa3f4ca1e3f7837b51fcb,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 7825851777726063236, guid: bd173ae7a4d569d45bb6adf40e32f4e9,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 5e17a3814638d4040a54efbac1d77325, type: 3}
+  Price: 0

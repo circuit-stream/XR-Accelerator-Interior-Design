@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6189202311431309414}
   - component: {fileID: 6166430739633979928}
   - component: {fileID: 6177347638660079510}
+  - component: {fileID: 9042990520998970565}
   m_Layer: 1
   m_Name: Eket_Base
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9042990520998970565
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190274755139739698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300026, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6190275432673565222
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 6189607987059709256}
   - component: {fileID: 6168949418840072196}
   - component: {fileID: 6177050159394291342}
+  - component: {fileID: 2812532253380124518}
   m_Layer: 1
   m_Name: Eket_Base_Short
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2812532253380124518
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190275432673565222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300014, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6190295644006468030
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 6195532691867921450}
   - component: {fileID: 6169266429785804046}
   - component: {fileID: 6178907426303881190}
+  - component: {fileID: 758600392801375599}
   m_Layer: 1
   m_Name: Eket_4X4
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &758600392801375599
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190295644006468030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300016, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191718404302316856
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +293,7 @@ GameObject:
   - component: {fileID: 6195530259035293824}
   - component: {fileID: 6166339563268939074}
   - component: {fileID: 6177367129996361518}
+  - component: {fileID: 7583898096468317126}
   m_Layer: 1
   m_Name: Eket_1X1
   m_TagString: Untagged
@@ -316,6 +362,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7583898096468317126
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191718404302316856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191781544639888826
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +387,7 @@ GameObject:
   - component: {fileID: 6189485464470986538}
   - component: {fileID: 6169277678868319192}
   - component: {fileID: 6177160689530834930}
+  - component: {fileID: 887997073856032390}
   m_Layer: 1
   m_Name: Eket_1X2
   m_TagString: Untagged
@@ -395,6 +456,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &887997073856032390
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191781544639888826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300024, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191784744580636154
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +481,7 @@ GameObject:
   - component: {fileID: 6195492660221061642}
   - component: {fileID: 6168964344810907564}
   - component: {fileID: 6176999941659727094}
+  - component: {fileID: 8184115458829885606}
   m_Layer: 1
   m_Name: Eket_Door_2X1
   m_TagString: Untagged
@@ -474,6 +550,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8184115458829885606
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191784744580636154}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300020, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191799455866787044
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +575,7 @@ GameObject:
   - component: {fileID: 6195594883203164472}
   - component: {fileID: 6169040627393504260}
   - component: {fileID: 6176978088047940066}
+  - component: {fileID: 936475671657899248}
   m_Layer: 1
   m_Name: Eket_Door_2X1
   m_TagString: Untagged
@@ -553,6 +644,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &936475671657899248
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191799455866787044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300020, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191803943801684848
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +669,7 @@ GameObject:
   - component: {fileID: 6195767823018322362}
   - component: {fileID: 6168906048663601692}
   - component: {fileID: 6177246323383377234}
+  - component: {fileID: 6990650211800643537}
   m_Layer: 1
   m_Name: Eket_1X1
   m_TagString: Untagged
@@ -632,6 +738,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6990650211800643537
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191803943801684848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191832938126922852
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +763,7 @@ GameObject:
   - component: {fileID: 6189186622778288962}
   - component: {fileID: 6169084713984503994}
   - component: {fileID: 6177361462789318446}
+  - component: {fileID: 2251229304065817043}
   m_Layer: 1
   m_Name: Eket_1X1
   m_TagString: Untagged
@@ -711,6 +832,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2251229304065817043
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191832938126922852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191894253302465672
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +857,7 @@ GameObject:
   - component: {fileID: 6189492880163686652}
   - component: {fileID: 6169144892243907622}
   - component: {fileID: 6178833494038420918}
+  - component: {fileID: 5523852527614109380}
   m_Layer: 1
   m_Name: Eket_1X1
   m_TagString: Untagged
@@ -790,6 +926,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5523852527614109380
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191894253302465672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191920261766167018
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +951,7 @@ GameObject:
   - component: {fileID: 6189232337731986984}
   - component: {fileID: 6169279203179810620}
   - component: {fileID: 6178810138663885464}
+  - component: {fileID: 4489406978591071475}
   m_Layer: 1
   m_Name: Eket_1X1
   m_TagString: Untagged
@@ -869,6 +1020,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4489406978591071475
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191920261766167018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191947032959976492
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +1045,7 @@ GameObject:
   - component: {fileID: 6189107389532900454}
   - component: {fileID: 6169055750005412392}
   - component: {fileID: 6176736745935221286}
+  - component: {fileID: 6579408159655016301}
   m_Layer: 1
   m_Name: Eket_Door_1X1
   m_TagString: Untagged
@@ -948,6 +1114,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6579408159655016301
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191947032959976492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300018, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6191952646858006916
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +1139,7 @@ GameObject:
   - component: {fileID: 6195547819714738928}
   - component: {fileID: 6169270459802996876}
   - component: {fileID: 6177212462908439810}
+  - component: {fileID: 4886364403266274367}
   m_Layer: 1
   m_Name: Eket_Base
   m_TagString: Untagged
@@ -1027,6 +1208,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4886364403266274367
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191952646858006916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300026, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6192109272042462374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1233,7 @@ GameObject:
   - component: {fileID: 6195274079960544968}
   - component: {fileID: 6169264668376235222}
   - component: {fileID: 6176810069080120990}
+  - component: {fileID: 1948645722006664490}
   m_Layer: 1
   m_Name: Eket_Base
   m_TagString: Untagged
@@ -1106,6 +1302,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1948645722006664490
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192109272042462374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300026, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6192159390768196856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,6 +1327,7 @@ GameObject:
   - component: {fileID: 6195294499799626046}
   - component: {fileID: 6169607614917309204}
   - component: {fileID: 6176900842405962514}
+  - component: {fileID: 347232383557612244}
   m_Layer: 1
   m_Name: Eket_Door_2X1
   m_TagString: Untagged
@@ -1185,6 +1396,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &347232383557612244
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192159390768196856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300020, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6192187211452669342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1421,7 @@ GameObject:
   - component: {fileID: 6195631157762504942}
   - component: {fileID: 6169044030380042964}
   - component: {fileID: 6176711988371520230}
+  - component: {fileID: 3449054072635057758}
   m_Layer: 1
   m_Name: Eket_4X4
   m_TagString: Untagged
@@ -1264,6 +1490,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3449054072635057758
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192187211452669342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300016, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6192267600473224952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1515,7 @@ GameObject:
   - component: {fileID: 6189466480461729048}
   - component: {fileID: 6168834397681780776}
   - component: {fileID: 6178748675564891238}
+  - component: {fileID: 4978107938356923168}
   m_Layer: 1
   m_Name: Eket_1X1
   m_TagString: Untagged
@@ -1343,6 +1584,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4978107938356923168
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192267600473224952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6192285549236579128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,6 +1609,7 @@ GameObject:
   - component: {fileID: 6189290736346802132}
   - component: {fileID: 6169475398750834062}
   - component: {fileID: 6178782820169165804}
+  - component: {fileID: 5752028994548589451}
   m_Layer: 1
   m_Name: Eket_4X4
   m_TagString: Untagged
@@ -1422,6 +1678,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5752028994548589451
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192285549236579128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300016, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6192307782716858792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1754,7 @@ GameObject:
   - component: {fileID: 6195525560098123230}
   - component: {fileID: 6166309702918407484}
   - component: {fileID: 6177050404653154308}
+  - component: {fileID: 4955262788201602154}
   m_Layer: 1
   m_Name: Eket_1X1
   m_TagString: Untagged
@@ -1552,6 +1823,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4955262788201602154
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192337151087339328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6192380745929085984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1848,7 @@ GameObject:
   - component: {fileID: 6195485746062563748}
   - component: {fileID: 6166501948566170926}
   - component: {fileID: 6177091097911238166}
+  - component: {fileID: 1641499053816751006}
   m_Layer: 1
   m_Name: Eket_Door_1X1
   m_TagString: Untagged
@@ -1631,6 +1917,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1641499053816751006
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192380745929085984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300018, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}
 --- !u!1 &6192398834534450760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,6 +1942,7 @@ GameObject:
   - component: {fileID: 6189409626563853508}
   - component: {fileID: 6169276742396567024}
   - component: {fileID: 6176935173417995220}
+  - component: {fileID: 7470219696332296394}
   m_Layer: 1
   m_Name: Eket_Base_Short
   m_TagString: Untagged
@@ -1710,3 +2011,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7470219696332296394
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192398834534450760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300014, guid: 51d040d7d0bcadb43b6755a9150855f7, type: 3}

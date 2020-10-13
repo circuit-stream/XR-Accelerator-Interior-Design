@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Lauter_ON
+  m_EditorClassIdentifier: 
+  Id: Lauter_ON
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 3882664155837353388, guid: a4cf45f7673cd5b45adc3c8657de0f4d,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 6911908133397464778, guid: a3170119cb3c5cc499227655b1f505ca,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 54aaa295fe185ac4bafd1d9caa9263ed, type: 3}
+  Price: 0

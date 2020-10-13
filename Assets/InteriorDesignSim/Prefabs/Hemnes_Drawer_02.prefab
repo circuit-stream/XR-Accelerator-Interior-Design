@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4378411939862021531}
   - component: {fileID: 4374635776235844349}
   - component: {fileID: 4366720322917019049}
+  - component: {fileID: 5265254231304315128}
   m_Layer: 0
   m_Name: Hemnes_Drawer
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5265254231304315128
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4380870103292625767}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8f2ae4361dcfa394f8ca7ce6c1ea220f, type: 3}

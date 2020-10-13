@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Sofa_08
+  m_EditorClassIdentifier: 
+  Id: Sofa_08
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 6334365451282465013, guid: 49fe0224ce8fbb342ad9a62563aabfec,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 8836053225996750277, guid: 329e3d2fd49009d44adb06d2e0f7ca57,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 982eb218f14cd514097a9358d6d61dfa, type: 3}
+  Price: 0

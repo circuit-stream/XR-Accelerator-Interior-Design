@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Ypperlig_Table
+  m_EditorClassIdentifier: 
+  Id: Ypperlig_Table
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 7202301854185451108, guid: d942f1e70f3574e48a503f8e1de09dc1,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 8663911875554958623, guid: 63c50849efc418d4b9743e5c5656c3b8,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 18a68a11a7295fc42ae1ad6b953f75d7, type: 3}
+  Price: 0

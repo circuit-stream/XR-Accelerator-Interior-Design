@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Hemnes_Drawer_01
+  m_EditorClassIdentifier: 
+  Id: Hemnes_Drawer_01
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 7062689852810633413, guid: 10e9b23d91b8d3142abbdd0d5dfe47a5,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 3836873478982407052, guid: 83004611f6b54aa4b97b8bd2362d609c,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: ae6f133189fc502489b492f3f40f3133, type: 3}
+  Price: 0

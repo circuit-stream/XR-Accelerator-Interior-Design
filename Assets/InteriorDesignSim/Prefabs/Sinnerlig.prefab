@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5400740244862140320}
   - component: {fileID: 5400740244861337472}
   - component: {fileID: 5400740244860239168}
+  - component: {fileID: 2614686474236919178}
   m_Layer: 0
   m_Name: Sinnerlig_Cable
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2614686474236919178
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400740244862428032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 744f4f345b711db4fafad0faa9b9cad4, type: 3}
 --- !u!1 &5400740244862428034
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 5400740244862140322}
   - component: {fileID: 5400740244861337474}
   - component: {fileID: 5400740244860239170}
+  - component: {fileID: 2910455577791343593}
   m_Layer: 0
   m_Name: Sinnerlig_Bulb
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2910455577791343593
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400740244862428034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 744f4f345b711db4fafad0faa9b9cad4, type: 3}
 --- !u!1 &5400740244862428036
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 5400740244862140324}
   - component: {fileID: 5400740244861337476}
   - component: {fileID: 5400740244860239172}
+  - component: {fileID: 6268530941199302677}
   m_Layer: 0
   m_Name: Sinnerlig
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6268530941199302677
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400740244862428036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 744f4f345b711db4fafad0faa9b9cad4, type: 3}
 --- !u!1 &5400740244862428038
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +327,7 @@ GameObject:
   - component: {fileID: 5400740244862140334}
   - component: {fileID: 5400740244861337486}
   - component: {fileID: 5400740244860239182}
+  - component: {fileID: 4007072207594298888}
   m_Layer: 0
   m_Name: Sinnerlig_wood
   m_TagString: Untagged
@@ -350,3 +396,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4007072207594298888
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400740244862428046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 744f4f345b711db4fafad0faa9b9cad4, type: 3}

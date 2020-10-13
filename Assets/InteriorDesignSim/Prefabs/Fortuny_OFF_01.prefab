@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3761024253852669529}
   - component: {fileID: 3771542855671617241}
   - component: {fileID: 3780108573848637873}
+  - component: {fileID: 5171132552674537334}
   m_Layer: 0
   m_Name: Fortuny_Top
   m_TagString: Untagged
@@ -80,6 +81,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5171132552674537334
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3756638283260326081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 77791dab17c496a469e941bd632bfc61, type: 3}
 --- !u!1 &3757196840660777511
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +106,7 @@ GameObject:
   - component: {fileID: 3760751110406232695}
   - component: {fileID: 3771681320871324547}
   - component: {fileID: 3779269894019490623}
+  - component: {fileID: 198178380547109571}
   m_Layer: 0
   m_Name: Fortuny_Bulb
   m_TagString: Untagged
@@ -159,6 +175,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &198178380547109571
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757196840660777511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 77791dab17c496a469e941bd632bfc61, type: 3}
 --- !u!1 &3757444282586100057
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +200,7 @@ GameObject:
   - component: {fileID: 3760136633939083831}
   - component: {fileID: 3770735783808482839}
   - component: {fileID: 3779271375360290659}
+  - component: {fileID: 6331961396985088028}
   m_Layer: 0
   m_Name: Fortuny_Base
   m_TagString: Untagged
@@ -238,6 +269,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6331961396985088028
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757444282586100057}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 77791dab17c496a469e941bd632bfc61, type: 3}
 --- !u!1 &3757994605681586139
 GameObject:
   m_ObjectHideFlags: 0

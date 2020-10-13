@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Fireplace
+  m_EditorClassIdentifier: 
+  Id: Fireplace
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 7112633824020518341, guid: e1eb02ecb26bf1e46b566edeecce0c72,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 4900934274694046649, guid: 2deab959cf021b9409902fc4dc994697,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 2e3a9858bc5a4c94abca0528247dbc77, type: 3}
+  Price: 0

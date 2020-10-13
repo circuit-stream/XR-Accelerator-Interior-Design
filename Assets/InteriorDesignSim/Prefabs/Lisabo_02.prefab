@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4090804934614332504}
   - component: {fileID: 4083977346856137504}
   - component: {fileID: 4073382264741561938}
+  - component: {fileID: 7393936858588712756}
   m_Layer: 0
   m_Name: Lisabo
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7393936858588712756
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094193415725481354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 08a11fe87a149814aa8255feb419d53a, type: 3}

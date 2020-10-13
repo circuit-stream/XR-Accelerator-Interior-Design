@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1769839113102037582}
   - component: {fileID: 1798083911870813428}
   - component: {fileID: 1789303367678835362}
+  - component: {fileID: 7263956780444030621}
   m_Layer: 0
   m_Name: Frosta
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7263956780444030621
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766858636590923770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2b3dd8b172c515649964264f7eea8677, type: 3}

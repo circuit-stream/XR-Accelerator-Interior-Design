@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2871865104197197538}
   - component: {fileID: 2863740358416743528}
   - component: {fileID: 2853753982678052346}
+  - component: {fileID: 3890209465581777421}
   m_Layer: 0
   m_Name: Skogsta
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3890209465581777421
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2867753388851296918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 75ffcdcf02a0c434fb351ffa787eb93c, type: 3}
 --- !u!1 &2868147065036209082
 GameObject:
   m_ObjectHideFlags: 0

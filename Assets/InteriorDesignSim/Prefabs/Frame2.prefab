@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 480734}
   - component: {fileID: 3372518}
   - component: {fileID: 2337762}
+  - component: {fileID: 1682753392412941387}
   m_Layer: 0
   m_Name: Glass
   m_TagString: Untagged
@@ -111,6 +112,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1682753392412941387
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 3c76672d32eff0148a15a35588defbdf, type: 3}
 --- !u!1 &176976
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +137,7 @@ GameObject:
   - component: {fileID: 446454}
   - component: {fileID: 3398188}
   - component: {fileID: 2329394}
+  - component: {fileID: 4992585752732777116}
   m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
@@ -190,3 +206,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4992585752732777116
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 3c76672d32eff0148a15a35588defbdf, type: 3}

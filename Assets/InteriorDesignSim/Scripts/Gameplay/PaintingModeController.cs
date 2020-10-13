@@ -147,7 +147,6 @@ namespace XRAccelerator.Gameplay
                         XRCpuImageSize,
                         XRCpuImageSize);
 
-                    break;
                 case ScreenOrientation.LandscapeLeft:
                     factor = (float)cpuImage.width / Screen.width;
                     screenOverflow = cpuImage.height - (int)(Screen.height * factor);

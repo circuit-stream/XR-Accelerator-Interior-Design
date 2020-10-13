@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Skogsta
+  m_EditorClassIdentifier: 
+  Id: Skogsta
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 1664891706095120253, guid: c09b6033053891344b9b2c10c5ac9097,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 8556679696348399692, guid: 345d3aa4bcaee6b4fb8d93b9cad77206,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: f88be752582cd0a429db0d53bacb820a, type: 3}
+  Price: 0

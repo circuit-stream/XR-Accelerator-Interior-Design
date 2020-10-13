@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7191638721368493249}
   - component: {fileID: 1920615950775576920}
   - component: {fileID: 4002860586923605719}
+  - component: {fileID: 4465684505177318606}
   m_Layer: 0
   m_Name: Cupboard_Glass
   m_TagString: Untagged
@@ -111,6 +112,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4465684505177318606
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012978404880175927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7755548376925695909, guid: 2fb099f4b8bd58247a6d9d78af6e39df, type: 3}
 --- !u!1 &4100666513403012800
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +137,7 @@ GameObject:
   - component: {fileID: 6499214597710768321}
   - component: {fileID: 7242939234414849352}
   - component: {fileID: 868498306898655159}
+  - component: {fileID: 7841395545453263371}
   m_Layer: 0
   m_Name: Cupboard
   m_TagString: Untagged
@@ -190,3 +206,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7841395545453263371
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4100666513403012800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5836728072050040443, guid: 2fb099f4b8bd58247a6d9d78af6e39df, type: 3}

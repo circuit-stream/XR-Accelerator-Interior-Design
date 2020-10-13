@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5997280438052564413}
   - component: {fileID: 5997280438055449129}
   - component: {fileID: 5997280438054735969}
+  - component: {fileID: 1310224175621676624}
   m_Layer: 0
   m_Name: Cupboard _Short_01
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1310224175621676624
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5997280438052193783}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 1184882d28f1180459fe57435d2f339f, type: 3}

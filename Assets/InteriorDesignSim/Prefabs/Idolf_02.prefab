@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 2749132686473499565}
   - component: {fileID: 2764743719256775241}
   - component: {fileID: 2773015593307359447}
+  - component: {fileID: 8673220009634721816}
   m_Layer: 0
   m_Name: Idolf
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8673220009634721816
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750997541490392617}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: e509ea041e85cd148ba52ec3a91351ce, type: 3}

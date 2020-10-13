@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Kallax_Serie_2x2
+  m_EditorClassIdentifier: 
+  Id: Kallax_Serie_2x2
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 727172754771586976, guid: c8f6ef5586c13924dae7efbd2fa8452b,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 7413854545253063813, guid: 9597056b402cc0b4aa6c20446b7eb9e3,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: ce17fdca8f7da5f45949427f3e11559d, type: 3}
+  Price: 0

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Rastog_Celeste
+  m_EditorClassIdentifier: 
+  Id: Rastog_Celeste
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 3087833613215597695, guid: d0cd90aafd0fb5f43b6e24089d17db66,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 1081052211541702549, guid: 3dc759229bef172439ee372da2ea89ef,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: 35eb061369802aa4b8962429b338cd14, type: 3}
+  Price: 0

@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5599568785000621177}
   - component: {fileID: 5599568785001915481}
   - component: {fileID: 5599568785002915481}
+  - component: {fileID: 3091140272448123299}
   m_Layer: 0
   m_Name: Foto_Cable
   m_TagString: Untagged
@@ -113,6 +114,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3091140272448123299
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599568785000659033}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 8b1bbb36ba8c8c34289117217b199655, type: 3}
 --- !u!1 &5599568785000659035
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +139,7 @@ GameObject:
   - component: {fileID: 5599568785000621179}
   - component: {fileID: 5599568785001915483}
   - component: {fileID: 5599568785002915483}
+  - component: {fileID: 5390656687377846739}
   m_Layer: 0
   m_Name: Foto_Ceiling
   m_TagString: Untagged
@@ -192,6 +208,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5390656687377846739
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599568785000659035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 8b1bbb36ba8c8c34289117217b199655, type: 3}
 --- !u!1 &5599568785000659037
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +233,7 @@ GameObject:
   - component: {fileID: 5599568785000621181}
   - component: {fileID: 5599568785001915485}
   - component: {fileID: 5599568785002915485}
+  - component: {fileID: 6941249914767694374}
   m_Layer: 0
   m_Name: Foto
   m_TagString: Untagged
@@ -271,6 +302,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6941249914767694374
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599568785000659037}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8b1bbb36ba8c8c34289117217b199655, type: 3}
 --- !u!1 &5599568785000659039
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +327,7 @@ GameObject:
   - component: {fileID: 5599568785000621183}
   - component: {fileID: 5599568785001915487}
   - component: {fileID: 5599568785002915487}
+  - component: {fileID: 2996089968922982592}
   m_Layer: 0
   m_Name: Foto_Bulb
   m_TagString: Untagged
@@ -350,3 +396,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2996089968922982592
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599568785000659039}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 8b1bbb36ba8c8c34289117217b199655, type: 3}

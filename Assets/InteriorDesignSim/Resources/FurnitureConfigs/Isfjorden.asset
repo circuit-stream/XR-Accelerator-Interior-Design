@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76adf0c5a4b83424584b1a941f4c9dc5, type: 3}
+  m_Name: Isfjorden
+  m_EditorClassIdentifier: 
+  Id: Isfjorden
+  FurnitureType: 0
+  FurniturePrefab: {fileID: 5991517240059288929, guid: b4017ba63bd8f024c8c315a41f92c536,
+    type: 3}
+  furniturePreviewPrefab: {fileID: 7456525623025509781, guid: 598b4a8d42a4af14a97e5f70b328fb1e,
+    type: 3}
+  Thumbnail: {fileID: 21300000, guid: c6978f2c5c3700d4e9692b2e0d546f30, type: 3}
+  Price: 0

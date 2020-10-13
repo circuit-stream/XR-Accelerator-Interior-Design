@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3195556322319224868}
   - component: {fileID: 3188087260699417936}
   - component: {fileID: 3178107994538970344}
+  - component: {fileID: 7730621588673442936}
   m_Layer: 0
   m_Name: Ypperlig_Table
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7730621588673442936
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192116929774136954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: be1c4ab023168cd4799da4d9387e41a7, type: 3}
