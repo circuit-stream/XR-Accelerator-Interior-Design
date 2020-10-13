@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4406954989069980}
   - component: {fileID: 33174587877081696}
   - component: {fileID: 23216921629669550}
+  - component: {fileID: 5307924431557512203}
   m_Layer: 0
   m_Name: Carpet_Kollund
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e83e6ae46dc674547b77444bc82e8995, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5307924431557512203
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070902090448074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 6bc35002d0ab8c14b8e5c86d50497dee, type: 3}
 --- !u!1 &1811953005557354
 GameObject:
   m_ObjectHideFlags: 0

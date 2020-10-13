@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 717734861768056633}
   - component: {fileID: 689487188803977559}
   - component: {fileID: 699650575975534675}
+  - component: {fileID: 6370489412495375767}
   m_Layer: 0
   m_Name: Ypperlig_Chair
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6370489412495375767
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711796384737837549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8eb277e2abe1a3a44bd2f47203ee5f6c, type: 3}
 --- !u!1 &712526096296622781
 GameObject:
   m_ObjectHideFlags: 0

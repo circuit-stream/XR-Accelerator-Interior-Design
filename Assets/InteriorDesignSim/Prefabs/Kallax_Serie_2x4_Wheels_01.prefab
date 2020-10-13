@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2276861543208908206}
   - component: {fileID: 2301121398256589598}
   - component: {fileID: 2289740769953247186}
+  - component: {fileID: 8033736657234760438}
   m_Layer: 0
   m_Name: Kallax_Weels
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8033736657234760438
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275085837497002686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: c83bbd80b1bdcf0488ce7ac5bbd4a0f7, type: 3}
 --- !u!1 &2275094427177658886
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 2276839966114900620}
   - component: {fileID: 2296983119505438976}
   - component: {fileID: 2289736161774035714}
+  - component: {fileID: 3822615213486627120}
   m_Layer: 0
   m_Name: Kallax_Weels
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3822615213486627120
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275094427177658886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: c83bbd80b1bdcf0488ce7ac5bbd4a0f7, type: 3}
 --- !u!1 &2275442534913844184
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 2271892324414493058}
   - component: {fileID: 2297261043533348164}
   - component: {fileID: 2289471705066082084}
+  - component: {fileID: 7021571742039574992}
   m_Layer: 0
   m_Name: Kallax_2x4
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7021571742039574992
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275442534913844184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300020, guid: 719740ac2e760d2498976b9fab674ce4, type: 3}
 --- !u!1 &2275706573531936534
 GameObject:
   m_ObjectHideFlags: 0

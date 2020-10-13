@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5453484714082644571}
   - component: {fileID: 5464977153040203879}
   - component: {fileID: 5472743476945755035}
+  - component: {fileID: 3330079987408514105}
   m_Layer: 0
   m_Name: Alu_Chair
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3330079987408514105
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5451504548144256553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 189a105ba1b11634ca1431da974cadbb, type: 3}

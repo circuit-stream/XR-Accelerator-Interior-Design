@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5128489686156819446}
   - component: {fileID: 5534318467872224552}
   - component: {fileID: 228864788111207019}
+  - component: {fileID: 263356463495130383}
   m_Layer: 0
   m_Name: Brunsta 1
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &263356463495130383
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7410237044923629517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c1789b141e044bf4ea902b7c78269b21, type: 3}
 --- !u!1 &7808281351386545490
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 7808281351386571122}
   - component: {fileID: 7808281351383179602}
   - component: {fileID: 7808281351384277906}
+  - component: {fileID: 6775039202314859518}
   m_Layer: 0
   m_Name: Brunsta_Cable
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6775039202314859518
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7808281351386545490}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: c1789b141e044bf4ea902b7c78269b21, type: 3}
 --- !u!1 &7808281351386545492
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 7808281351386571124}
   - component: {fileID: 7808281351383179604}
   - component: {fileID: 7808281351384277908}
+  - component: {fileID: 9169829443006434297}
   m_Layer: 0
   m_Name: Brunsta_Glass
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9169829443006434297
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7808281351386545492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: c1789b141e044bf4ea902b7c78269b21, type: 3}
 --- !u!1 &7808281351386545494
 GameObject:
   m_ObjectHideFlags: 0

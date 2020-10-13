@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8565036106118978949}
   - component: {fileID: 8549013256762116491}
   - component: {fileID: 8540670727451134465}
+  - component: {fileID: 1333058460192145047}
   m_Layer: 0
   m_Name: Stocksund
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1333058460192145047
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561898768947916489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 6da7ac21b9ede0742825c7e92ac2f4ec, type: 3}
 --- !u!1 &8563274932707265249
 GameObject:
   m_ObjectHideFlags: 0

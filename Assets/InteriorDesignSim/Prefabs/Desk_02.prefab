@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1768058911231981762}
   - component: {fileID: 1796553888493422184}
   - component: {fileID: 1786660540589662862}
+  - component: {fileID: 6942484751713471970}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6942484751713471970
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773162221083328448}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: ef9fa7e3247b0634c9dd0a894f36445b, type: 3}
 --- !u!1 &1773324021195420532
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +137,7 @@ GameObject:
   - component: {fileID: 1768153218109566742}
   - component: {fileID: 1796884020912800952}
   - component: {fileID: 1786668531344117246}
+  - component: {fileID: 6080870710616154286}
   m_Layer: 0
   m_Name: Desk_Drawer
   m_TagString: Untagged
@@ -190,3 +206,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6080870710616154286
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774003858090668014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: ef9fa7e3247b0634c9dd0a894f36445b, type: 3}

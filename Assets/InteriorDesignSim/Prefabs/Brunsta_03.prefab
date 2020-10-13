@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8564698278255263633}
   - component: {fileID: 8564698278258130865}
   - component: {fileID: 8564698278257032561}
+  - component: {fileID: 6705791640804133710}
   m_Layer: 0
   m_Name: Brunsta_Cable
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6705791640804133710
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8564698278255027121}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: c1789b141e044bf4ea902b7c78269b21, type: 3}
 --- !u!1 &8564698278255027125
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +138,7 @@ GameObject:
   - component: {fileID: 8564698278255263639}
   - component: {fileID: 8564698278258130871}
   - component: {fileID: 8564698278257032567}
+  - component: {fileID: 1576381597825915718}
   m_Layer: 0
   m_Name: Brunsta_Glass
   m_TagString: Untagged
@@ -191,6 +207,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1576381597825915718
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8564698278255027127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: c1789b141e044bf4ea902b7c78269b21, type: 3}
 --- !u!1 &8957956959703998766
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +232,7 @@ GameObject:
   - component: {fileID: 6749614921485935893}
   - component: {fileID: 6217962980698598347}
   - component: {fileID: 1849407694449898632}
+  - component: {fileID: 6770283039044321918}
   m_Layer: 0
   m_Name: Brunsta 1
   m_TagString: Untagged
@@ -270,3 +301,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6770283039044321918
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957956959703998766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c1789b141e044bf4ea902b7c78269b21, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8169185236802440972}
   - component: {fileID: 8159153031108968004}
   - component: {fileID: 8150926605130676840}
+  - component: {fileID: 9128835456184422966}
   m_Layer: 0
   m_Name: Hemnes_Shelf
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9128835456184422966
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8162892143164933518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 517bdd68da6084149b2585f59b5e59ec, type: 3}
 --- !u!1 &8163862732132123370
 GameObject:
   m_ObjectHideFlags: 0

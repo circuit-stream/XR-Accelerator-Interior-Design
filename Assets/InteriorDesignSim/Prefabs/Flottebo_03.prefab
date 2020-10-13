@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2376306461353812384}
   - component: {fileID: 2350664962261306010}
   - component: {fileID: 2358084858743565330}
+  - component: {fileID: 4212538817690980011}
   m_Layer: 0
   m_Name: Flottebo_Sofa
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4212538817690980011
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371517385934471182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 448b841c183bde7468a4bc1770493b6c, type: 3}
 --- !u!1 &2371530851538381936
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 2376454302773494364}
   - component: {fileID: 2350037040323040278}
   - component: {fileID: 2358018765725077686}
+  - component: {fileID: 1626693178558309354}
   m_Layer: 0
   m_Name: Flottebo_Pillows2
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1626693178558309354
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371530851538381936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 448b841c183bde7468a4bc1770493b6c, type: 3}
 --- !u!1 &2372907451401388644
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +233,7 @@ GameObject:
   - component: {fileID: 2370322392177654664}
   - component: {fileID: 2350202467375218850}
   - component: {fileID: 2357721181906158420}
+  - component: {fileID: 2405782407189078217}
   m_Layer: 0
   m_Name: Flottebo_Pillows1
   m_TagString: Untagged
@@ -271,6 +302,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2405782407189078217
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372965127454830958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 448b841c183bde7468a4bc1770493b6c, type: 3}
 --- !u!1 &2373122683734150852
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +327,7 @@ GameObject:
   - component: {fileID: 2370149392576175108}
   - component: {fileID: 2350111120500883730}
   - component: {fileID: 2359375699895668832}
+  - component: {fileID: 8335095553806280298}
   m_Layer: 0
   m_Name: Flottebo_Pillows3
   m_TagString: Untagged
@@ -350,3 +396,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8335095553806280298
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373122683734150852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 448b841c183bde7468a4bc1770493b6c, type: 3}

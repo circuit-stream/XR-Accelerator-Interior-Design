@@ -63,6 +63,7 @@ GameObject:
   - component: {fileID: 2732788228236442209}
   - component: {fileID: 2708608166394638535}
   - component: {fileID: 2717728778023918519}
+  - component: {fileID: 2370673731369431005}
   m_Layer: 0
   m_Name: Plastic_Chair_Legs
   m_TagString: Untagged
@@ -131,6 +132,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2370673731369431005
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731183728065504951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: f267318c5a9162c49aa5e76ecf012029, type: 3}
 --- !u!1 &2731359883134540871
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +157,7 @@ GameObject:
   - component: {fileID: 2734740346865130917}
   - component: {fileID: 2708085270851166153}
   - component: {fileID: 2717831771796508859}
+  - component: {fileID: 3853235747387461310}
   m_Layer: 0
   m_Name: Plastic_Chair_Seat
   m_TagString: Untagged
@@ -210,3 +226,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3853235747387461310
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731359883134540871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: f267318c5a9162c49aa5e76ecf012029, type: 3}
