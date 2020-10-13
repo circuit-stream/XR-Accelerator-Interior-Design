@@ -30,6 +30,15 @@ namespace XRAccelerator.Configs.Editor
             {
                 CreatePrefabs();
             }
+
+            GUILayout.Space(15);
+            GuiLine();
+            GUILayout.Space(15);
+
+            if (GUILayout.Button("Add Mesh Collier to Models"))
+            {
+                AddMeshColliderToModels();
+            }
         }
 
         private void CreatePrefabs()
@@ -96,6 +105,38 @@ namespace XRAccelerator.Configs.Editor
             DestroyImmediate(instantiatedPrefabBase);
             DestroyImmediate(instantiatedFurnitureModel);
         }
+
+
+        private void AddMeshColliderToModels()
+        {
+            AssetDatabase.StartAssetEditing();
+
+            foreach (var furnitureModel in generatorConfig.furnitureModels)
+            {
+                AddMeshColliderToModel(furnitureModel);
+            }
+
+            AssetDatabase.StopAssetEditing();
+        }
+
+        private void AddMeshColliderToModel(GameObject furnitureModel)
+        {
+            var modelPath = AssetDatabase.GetAssetPath(furnitureModel);
+            var prefab = PrefabUtility.LoadPrefabContents(modelPath);
+
+            var renderers = prefab.GetComponentsInChildren<MeshRenderer>();
+            foreach (var meshRenderer in renderers)
+            {
+                if (!meshRenderer.GetComponent<MeshCollider>())
+                {
+                    meshRenderer.gameObject.AddComponent<MeshCollider>();
+                }
+            }
+
+            PrefabUtility.SaveAsPrefabAsset(prefab, modelPath);
+            PrefabUtility.UnloadPrefabContents(prefab);
+        }
+
 
         #region Directory operations
 
