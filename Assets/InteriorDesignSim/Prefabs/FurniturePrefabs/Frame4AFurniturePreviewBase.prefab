@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5680251811824245200, guid: eb2b1e51b5513294a9a8a28d9e1cabe8,
         type: 3}
       propertyPath: m_Name
-      value: FurniturePreviewBase
+      value: Frame4AFurniturePreviewBase
       objectReference: {fileID: 0}
     - target: {fileID: 5680251811824245206, guid: eb2b1e51b5513294a9a8a28d9e1cabe8,
         type: 3}
@@ -105,12 +105,12 @@ PrefabInstance:
     - target: {fileID: 1800404545938879517, guid: c7fe69aba719347429b4217964124f72,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1800404545938879517, guid: c7fe69aba719347429b4217964124f72,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1800404545938879517, guid: c7fe69aba719347429b4217964124f72,
         type: 3}
@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 1800404545938879517, guid: c7fe69aba719347429b4217964124f72,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1800404545938879517, guid: c7fe69aba719347429b4217964124f72,
         type: 3}
@@ -135,12 +135,12 @@ PrefabInstance:
     - target: {fileID: 1800404545938879517, guid: c7fe69aba719347429b4217964124f72,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180.00002
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1800404545938879517, guid: c7fe69aba719347429b4217964124f72,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7fe69aba719347429b4217964124f72, type: 3}
