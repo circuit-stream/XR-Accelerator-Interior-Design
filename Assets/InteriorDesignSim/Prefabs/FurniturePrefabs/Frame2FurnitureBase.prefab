@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5680251811824245200, guid: 6231a0504e8c2da449aeb4d93bced2bf,
         type: 3}
       propertyPath: m_Name
-      value: FurnitureBase
+      value: Frame2FurnitureBase
       objectReference: {fileID: 0}
     - target: {fileID: 5680251811824245206, guid: 6231a0504e8c2da449aeb4d93bced2bf,
         type: 3}
@@ -92,7 +92,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 433316, guid: a44a43452d60d904797cc7b4f11f5056, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 433316, guid: a44a43452d60d904797cc7b4f11f5056, type: 3}
       propertyPath: m_LocalPosition.z
@@ -108,11 +108,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 433316, guid: a44a43452d60d904797cc7b4f11f5056, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 433316, guid: a44a43452d60d904797cc7b4f11f5056, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 433316, guid: a44a43452d60d904797cc7b4f11f5056, type: 3}
       propertyPath: m_RootOrder
@@ -128,7 +128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 433316, guid: a44a43452d60d904797cc7b4f11f5056, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90.00001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a44a43452d60d904797cc7b4f11f5056, type: 3}
